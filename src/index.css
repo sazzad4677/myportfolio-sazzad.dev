@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-active {
+  position: fixed;
+  top: -70px;
+  left: 0;
+  right: 0;
+  /* background: rgba(10, 25, 47, 0.85); */
+  transform: translateY(70px);
+  transition: transform 500ms ease, background 500ms ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1); */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+section {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #0a192f #020c1b;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: #a8b2d1;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 20px;
+}
+body::-webkit-scrollbar-track {
+  background: #020b1b;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #0a192f;
+  border: 3px solid #0a192f;
+  border-radius: 10px;
 }

@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.count {
+  counter-increment: item 1;
+}
+.count-item::before {
+  content: "0" counter(item) ".";
+  margin-right: 5px;
+  font-size: 14px;
+  text-align: right;
+  color: rgb(100 255 218);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-toggle-btn {
+  cursor: pointer;
+  width: 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu-toggle-btn span {
+  background: rgb(100 255 218);
+  display: block;
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
-
-.App-link {
-  color: #61dafb;
+.menu-toggle-btn-open span:nth-child(1),
+.menu-toggle-btn-open span:nth-child(3) {
+  transform: translate(0px, 13px) rotate(-45deg);
+  margin: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-toggle-btn-open span:nth-child(2) {
+  height: 0;
+  margin: 0;
+}
+.menu-toggle-btn-open span:nth-child(3) {
+  transform: translate(0px, 9px) rotate(45deg);
 }
