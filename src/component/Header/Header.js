@@ -45,7 +45,7 @@ const Header = () => {
           animate={{
             opacity: 1,
             scale: 1,
-            transition: { delay: 2.3, duration: 0.5, ease: "easeInOut" },
+            transition: { duration: 0.5, ease: "easeInOut" },
           }}
           className="w-8 md:w-11"
         >
@@ -99,7 +99,6 @@ const Header = () => {
               y: 0,
               transition: {
                 duration: 0.5,
-                delay: !isTabletOrMobile ? 0.1 : 2.7,
                 ease: "easeInOut",
               },
             }}
@@ -129,8 +128,7 @@ const Header = () => {
               opacity: 1,
               y: 0,
               transition: {
-                duration: 0.6,
-                delay: !isTabletOrMobile ? 0.2 : 2.7,
+                duration: 0.5,
                 ease: "easeInOut",
               },
             }}

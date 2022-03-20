@@ -35,6 +35,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #0a192f #020c1b;
+  background-color: #0A192F;
 }
 
 * {
