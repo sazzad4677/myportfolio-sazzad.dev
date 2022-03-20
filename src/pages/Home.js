@@ -1,4 +1,5 @@
 import React from "react";
+import About from "../component/About/About";
 import Header from "../component/Header/Header";
 import Hero from "../component/Hero/Hero";
 import Email from "../component/Socials/Email";
@@ -12,6 +13,7 @@ const Home = () => {
         <Hero />
         <Socials />
         <Email />
+        <About/>
       </div>
     </>
   );

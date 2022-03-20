@@ -17,10 +17,15 @@ module.exports = {
         blueWhite: "#e6f1ff",
         green: "#64ffda",
         greenTint: "rgba(100, 255, 218, 0.1)",
+        boatswain: "#233554"
       },
       transitionTimingFunction: {
         transition: "cubic-bezier(0.645, 0.045, 0.355, 1)",
       },
+      fontFamily: {
+        mono: "SFMono",
+        sans: "Calibre",
+      }
     },
   },
   variants: {

@@ -35,7 +35,7 @@ const Header = () => {
     <header
       className={`z-50 h-auto backdrop-filter backdrop-blur bg-libertyBlue absolute flex items-center w-full px-6 md:py-0 md:px-10 ${
         scrollPosition >= 120
-          ? "header-active py-4 md:h-16 bg-opacity-95"
+          ? "header-active py-4 md:h-16 bg-opacity-80"
           : "md:h-24 py-5"
       }`}
     >
@@ -60,18 +60,23 @@ const Header = () => {
                 fill="none"
               >
                 <title>Logo</title>
-                <polygon
-                  id="Shape"
-                  stroke="currentColor"
-                  strokeWidth="5"
-                  points="42,3 3,25 3,70 42,93 81,71 81,26 "
-                />
                 <g>
-                  <path
-                    fill="currentColor"
-                    d="M29.3,63.9V32.1h6.4v12.5h12.6V32.1h6.4v31.8h-6.4V50H35.7v13.9H29.3z"
+                  <polygon
+                    id="Shape"
+                    stroke="currentColor"
+                    strokeWidth="5"
+                    points="42,3 3,25 3,70 42,93 81,71 81,26 "
                   />
                 </g>
+                <text
+                  x="29"
+                  y="64"
+                  fill="currentColor"
+                  fontSize="50px"
+                  fontFamily="font-mono"
+                >
+                  S
+                </text>
               </svg>
             </div>
           </Link>
