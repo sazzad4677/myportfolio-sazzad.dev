@@ -4,24 +4,24 @@ const Works = () => {
     {
       title: "Cutly - Link Shortener",
       description:
-        "Users can view the site's ideal layout based on the size of their device's screen. Obtain the whole URL of the user. To double-check them, use the url validator. Any legitimate URL can be shortened. Error Handling with a Custom Error Handler. See a list of their shortened URLs, even after refreshing the browser.Copy the shortened link to their clipboard with a single click.",
-      technologies: ["React", "Express JS" , "Tailwind CSS", "Mongoose"],
+        "A web application for shortening long URLs. Here I used a url validator. I didn't use any third-party APIs. Instead, I built my own API with my proper error handling.",
+      technologies: ["React", "Express JS", "Tailwind CSS", "Mongoose"],
       links: {
         github: "https://github.com/sazzad4677/cutly-frontend",
         external: "https://cutly.netlify.app/",
       },
-      image: { width: 1580, height: 949, url: "cutly.png" },
+      image: { url: "cutly.webp" },
     },
     {
       title: "Interactive Comments Section",
       description:
-        "Comments and responses can be created, read, updated, and deleted. Comment with an upvote or a downvote. Timestamps are used to dynamically track the passage of time. Nested comments structures. Users may see the most popular comments at the top.",
+        "Users can read, add, edit, and delete comments in this project. Comments can be voted up or down by the user. The most popular comments will be displayed first. After the comment, the user can observe how much time has passed.",
       technologies: ["React", "Tailwind CSS"],
       links: {
         github: "https://github.com/sazzad4677/Interactive-comments-section",
         external: "https://interactive-comments-bd.netlify.app/",
       },
-      image: { width: 2400, height: 1280, url: "comment.png" },
+      image: {url: "comment.webp" },
     },
     {
       title: "GO Mart",
@@ -32,13 +32,13 @@ const Works = () => {
         "Express.js",
         "React JS",
         "Tailwind CSS",
-        "Redux"
+        "Redux",
       ],
       links: {
         github: "https://github.com/sazzad4677/GoMart-Frontend",
         external: "https://go-mart.netlify.app/",
       },
-      image: { width: 1580, height: 925, url: "gomart.png" },
+      image: { url: "gomart.webp" },
     },
   ];
   return (
@@ -60,7 +60,7 @@ const Works = () => {
             }`}
           >
             <div
-              className={`relative z-10 col-span-full row-span-full h-full bg-libertyBlue px-10 py-6 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:shadow-none ${
+              className={`relative z-10 col-span-full row-span-full h-full bg-lightNavy opacity-90 md:opacity-100 px-10 py-6 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:shadow-none ${
                 (index + 1) % 2 === 0
                   ? " md:col-start-1 md:col-end-[7] "
                   : " md:col-start-5 md:col-end-[-1] lg:col-start-7 "
@@ -69,24 +69,21 @@ const Works = () => {
               <p className="font-regular my-[10px] font-mono text-sm text-green">
                 Featured Project
               </p>
-              <h3 className="mb-6 text-[clamp(24px,5vw,28px)] font-semibold leading-[1.1] tracking-[1px] text-lightestSlate transition-colors duration-300 ease-transition hover:text-green">
+              <h3 className="mb-2 text-[clamp(24px,5vw,28px)] font-semibold leading-[1.1] tracking-[1px] text-lightestSlate transition-colors duration-300 ease-transition hover:text-green">
                 <a
                   className="static"
-                  href={
-                    project.links.external ||
-                    project.links.github
-                  }
+                  href={project.links.external || project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {project.title}
                 </a>
               </h3>
-              <div className="relative z-10 rounded-sm text-base text-lightSlate md:bg-lightNavy md:p-5">
+              <div className="relative z-10 rounded-sm text-base text-lightSlate md:shadow md:bg-lightNavy md:p-5">
                 <p>{project.description}</p>
               </div>
               <ul
-                className={`mt-5 flex flex-wrap items-center space-x-5 font-mono text-xs text-green ${
+                className={`mt-2 flex flex-wrap items-center space-x-5 font-mono text-xs text-green ${
                   (index + 1) % 2 === 0
                     ? "justify-end md:justify-start"
                     : "justify-end"
@@ -97,7 +94,7 @@ const Works = () => {
                 ))}
               </ul>
               <div
-                className={`mt-5 flex items-center transition-colors duration-300 ease-transition ${
+                className={`mt-2 flex items-center transition-colors duration-300 ease-transition ${
                   (index + 1) % 2 === 0
                     ? "justify-end md:justify-start"
                     : "justify-end"
@@ -123,30 +120,6 @@ const Works = () => {
                     >
                       <title>GitHub</title>
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                )}
-                {project.links.download && (
-                  <a
-                    className="p-3 transition-colors duration-300 ease-transition hover:text-green"
-                    href={project.links.download}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <title>Download Now</title>
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                      />
                     </svg>
                   </a>
                 )}
@@ -178,7 +151,7 @@ const Works = () => {
               </div>
             </div>
             <div
-              className={`relative bg-green before:absolute before:inset-0 before:z-50 before:h-full before:w-full before:bg-navy before:mix-blend-screen before:content-[''] hover:bg-transparent before:hover:bg-transparent ${
+              className={`group relative bg-green transition-all duration-200 ease-transition  ${
                 (index + 1) % 2 === 0
                   ? "col-span-full row-span-full md:col-start-6 md:col-end-[-1] "
                   : "col-span-full row-span-full md:col-start-1 md:col-end-8 "
@@ -186,20 +159,15 @@ const Works = () => {
               `}
             >
               <a
-                href={
-                  project.links.external ||
-                  project.links.download
-                }
+                href={project.links.external}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="">
+                <div>
                   <img
-                    className=" h-full object-cover mix-blend-multiply brightness-90 grayscale filter transition-all duration-300 ease-transition hover:bg-transparent  hover:mix-blend-normal hover:grayscale-0 hover:filter-none"
-                    width={project.image.width}
-                    height={project.image.height}
+                    className="w-full h-full object-cover mix-blend-multiply brightness-90 grayscale filter transition-all duration-200 ease-transition group-hover:bg-transparent  group-hover:mix-blend-normal group-hover:grayscale-0 group-hover:filter-none "
                     src={require(`../../images/${project.image.url}`)}
-                    alt="projects screenshot"
+                    alt={`${project.title} Screenshot`}
                   />
                 </div>
               </a>

@@ -1,62 +1,81 @@
 import React from "react";
-
+import myImage from "../../images/me.webp";
 const About = () => {
   const skills = [
-    { name: "HTML & (S)CSS" },
+    { name: "HTML & CSS" },
     { name: "JavaScript (ES6+)" },
     { name: "Bootstrap" },
     { name: "Tailwind CSS" },
     { name: "React & Redux" },
-    { name: "React Native" },
-    { name: "Electron" },
     { name: "Node.js" },
-    { name: "Express.js" },
     { name: "MongoDB" },
+    { name: "Express.js" },
+    { name: "Mongoose" },
   ];
   return (
     <section id="about" className="min-h-full max-w-[900px] py-12 md:py-24">
-      <div className="flex items-center space-x-4 mt-5 mb-10 ">
+      <div className="mt-5 mb-10 flex items-center space-x-4 ">
         <h2
-          className={`font-bold capitalize text-lightestSlate font-sans before:content-['01.'] before:text-xl before:text-green before:font-mono before:mr-2.5 whitespace-nowrap text-[clamp(26px,5vw,32px)]`}
+          className={`whitespace-nowrap font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-lightestSlate before:mr-2.5 before:font-mono before:text-xl before:text-green before:content-['01.']`}
         >
           About Me
         </h2>
-        <span className="w-52 h-px bg-boatswain" />
+        <span className="h-px w-52 bg-boatswain" />
       </div>
-      <div className="grid gap-10 grid-cols-1 md:grid-cols-[3fr,2fr]">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-[3fr,2fr]">
         <div className="space-y-5">
           <div className="space-y-5 font-sans">
-            <p className="text-xl text-slate leading-[1.3]">
-              Hello! I'm Sazzad, a passionate self-taught Full Stack developer
-              from Bangladesh. I build things for the web & mobile.
-              <br />I develop
-              <span className="text-green">web applications,</span> mobile
-              applications & desktop applications. Passionate about new
-              technologies and problem-solving. I am available for any kind of
-              job opportunity that suits my interests
-            </p>
+            <div>
+              <p className="text-xl leading-[1.3] text-slate">
+                I'm a knowledgeable and enthusiastic <span className="text-green">Full-Stack Developer</span> who
+                puts an emphasis on efficiency and lifelong learning. I am
+                respectful and excited about Web Applications and everything
+                related to them. I'm interested in web programming, app
+                development, and website creation. Working in this industry
+                gives me the opportunity to learn new things and get new
+                perspectives.
+              </p>
+              <p className="mt-3 text-xl leading-[1.3] text-slate">
+                My goal is to design programs that are both{" "}
+                <span className="text-green"> scalable and efficient</span> , as
+                well as user experiences that are captivating and pixel-perfect.
+              </p>
+              <p className="mt-3 text-xl leading-[1.3] text-slate">
+                As a result, I'm looking for a company willing to recruit me as
+                a developer. In exchange, I pledge to give 100% of my work and
+                to be a pleasant and courteous team member. I'm looking for a{" "}
+                <span className="text-green">
+                  web development job or internship
+                </span>{" "}
+                right now. I'm always on the lookout for new ways to learn and
+                accomplish more.
+              </p>
+            </div>
+
             <p className="ml-1 mt-5 text-xl text-slate ">
               Here are a few technologies I've been working with recently:
             </p>
           </div>
-          <ul className="ml-1 font-mono text-sm text-slate list-inside tracking-normal  grid gap-x-4 gap-y-2 grid-cols-[repeat(2,minmax(140px,200px))]">
+          <ul className="ml-1 grid list-inside grid-cols-[repeat(2,minmax(140px,200px))] gap-x-4 gap-y-2  font-mono text-sm tracking-normal text-slate">
             {skills.map((skill, index) => (
               <li
                 key={index}
-                className="before:content-['▹'] list-none before:text-green before:text-sm"
+                className="list-none before:text-sm before:text-green before:content-['▹']"
               >
                 <span className="ml-3">{skill.name}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="max-w-[300px] mx-auto ">
-          <div className="relative shadow-2xl group cursor-pointer">
-            <div className="z-0 rounded-lg absolute w-full h-full top-7 sm:top-9 left-7 sm:left-9 border-4 border-green group-hover:top-6 group-hover:left-6 transition-all duration-200 ease-transition"></div>
-            <div className="rounded-lg overflow-hidden bg-green relative">
+        <div className="mx-auto max-w-[300px] ">
+          <div className="group relative cursor-pointer shadow-2xl">
+            <div className="absolute top-7 left-7 z-0 h-full w-full rounded-lg border-4 border-green transition-all duration-200 ease-transition group-hover:top-6 group-hover:left-6 sm:top-9 sm:left-9"></div>
+            <div className="relative overflow-hidden rounded-lg bg-green">
               <img
-                className="z-10 filter transition-all duration-100 ease-transition grayscale mix-blend-multiply  group-hover:grayscale-0 group-hover:mix-blend-normal"
-                src="https://scontent.fdac142-1.fna.fbcdn.net/v/t1.6435-9/97989063_1616738725146489_5845549265513873408_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEnL6nYGoSvKtlxDNlxzFq17e4SuL_7LTrt7hK4v_stOnqNDuuf9s-_M0iQhkSqO5we4qvU_WJQAfcDc_UiV5Gi&_nc_ohc=KzyKp6CBBYQAX-8W4T4&_nc_ht=scontent.fdac142-1.fna&oh=00_AT9HbYC-sgQEk0DsF68jVZ5GAWh6kZjopUgHGhZevtjbeQ&oe=625B0347"
+                width="500"
+                height="500"
+                className="z-10 mix-blend-multiply grayscale filter transition-all duration-100 ease-transition  group-hover:mix-blend-normal group-hover:grayscale-0"
+                src={myImage}
                 alt=""
               />
             </div>
