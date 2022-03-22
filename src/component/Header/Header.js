@@ -134,7 +134,7 @@ const Header = () => {
             }}
           >
             <a
-              href="/CV_of_Md_Sazzad_Hossain_Junior_Full_Stack_Developer.pdf"
+              href="https://drive.google.com/uc?id=1_FcR5vrWgUlW2g3MoeZN_uRtMC5Cfnq5&export=download"
               target="_blank"
               rel="noopener noreferrer"
               className="text-green inline-block leading-none text-sm mt-3.5 md:mt-0 ml-3 font-mono bg-transparent border border-green rounded hover:bg-greenTint py-3 px-4 transition-all duration-300 ease-in-out"
