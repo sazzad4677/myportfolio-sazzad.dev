@@ -33,7 +33,7 @@ const Loader = ({ setLoading }) => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 1,
+        delay: 1.1,
         duration: 0.5,
         ease: "easeInOut",
       },
@@ -44,9 +44,9 @@ const Loader = ({ setLoading }) => {
     <AnimatePresence>
       <motion.div
         key="loader"
-        className="bg-libertyBlue w-full h-screen flex items-center justify-center fixed inset-0 z-[99]"
+        className="fixed inset-0 z-[99] flex h-screen w-full items-center justify-center bg-libertyBlue"
       >
-        <div className="w-32 h-32 text-green">
+        <div className="h-32 w-32 text-green">
           <motion.svg
             variants={svgVariants}
             initial="hidden"
@@ -59,7 +59,6 @@ const Loader = ({ setLoading }) => {
             fill="none"
           >
             <title>Logo</title>
-
             <motion.path
               variants={pathVariants}
               stroke="currentColor"
@@ -73,23 +72,8 @@ const Loader = ({ setLoading }) => {
                   L 89, 73
                   L 89, 28 z"
             />
-            <g>
-              <motion.path
-                variants={textVariants}
-                id="eEOMqLXQADV4"
-                d="M 50, 5
-                L 11, 27
-                L 11, 72
-                L 50, 95
-                L 89, 73
-                L 89, 28 z"
-                transform="matrix(1 0 0 1 8 2)"
-                fill="none"
-                stroke="none"
-                stroke-width="5"
-              />
-            </g>
-            <text
+            <motion.text
+              variants={textVariants}
               x="50%"
               y="55"
               fill="currentColor"
@@ -99,7 +83,7 @@ const Loader = ({ setLoading }) => {
               text-anchor="middle"
             >
               S
-            </text>
+            </motion.text>
           </motion.svg>
         </div>
       </motion.div>

@@ -1,37 +1,12 @@
-import { motion } from "framer-motion";
 import React from "react";
 
-const Socials = () => {
-  const container = {
-    animate: {
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const item = {
-    initial: { opacity: 0 },
-    animate: {
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
+const Footer = () => {
   return (
-    <div className="hidden fixed bottom-0 md:left-5 lg:left-10 z-10 md:flex flex-col items-center space-y-5">
-      <motion.ul
-        variants={container}
-        initial="initial"
-        animate="animate"
-        className="flex flex-col items-center justify-center space-y-1"
-      >
-        {/* <motion.li
-          variants={item}
-          className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
-        >
+    <footer className="relative min-h-[70px] p-10 text-center">
+      <ul className="flex items-center justify-center space-y-1 md:hidden">
+        {/* <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
             href="https://facebook.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -51,13 +26,10 @@ const Socials = () => {
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
           </a>
-        </motion.li> */}
-        <motion.li
-          variants={item}
-          className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
-        >
+        </li> */}
+        <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
             href="https://github.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -77,13 +49,10 @@ const Socials = () => {
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
             </svg>
           </a>
-        </motion.li>
-        <motion.li
-          variants={item}
-          className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
-        >
+        </li>
+        <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
             href="https://twitter.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -103,13 +72,10 @@ const Socials = () => {
               <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
             </svg>
           </a>
-        </motion.li>
-        <motion.li
-          variants={item}
-          className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
-        >
+        </li>
+        <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
             href="https://www.linkedin.com/in/sazzad4673/"
             target="_blank"
             rel="noopener noreferrer"
@@ -131,18 +97,20 @@ const Socials = () => {
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
           </a>
-        </motion.li>
-      </motion.ul>
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { ease: "easeInOut", duration: 0.5, delay: 0.1 },
-        }}
-        className="w-[1px] h-32 bg-lightestSlate"
-      />
-    </div>
+        </li>
+      </ul>
+      <p className="text-base font-light tracking-[1px]">
+        Designed by{" "}
+        <a href="https://github.com/bchiang7" className="text-green">
+          Brittany
+        </a>{" "}
+        & Developed by{" "}
+        <a href="https://github.com/sazzad4677" className="text-green">
+          Sazzad
+        </a>
+      </p>
+    </footer>
   );
 };
 
-export default Socials;
+export default Footer;

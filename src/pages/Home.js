@@ -6,6 +6,10 @@ import Header from "../component/Header/Header";
 import Hero from "../component/Hero/Hero";
 import Email from "../component/Socials/Email";
 import Socials from "../component/Socials/Socials";
+import Works from "../component/Works/Works";
+import Footer from "../component/Footer/Footer";
+import Contact from "../component/Contact/Contact";
+import Archive from "../component/Archive/Archive";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -22,6 +26,10 @@ const Home = () => {
             <Email />
             <About />
             <Experience />
+            <Works/>
+            <Archive/>
+            <Contact/>
+            <Footer/>
           </div>
         </>
       )}

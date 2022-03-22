@@ -134,7 +134,7 @@ const Header = () => {
             }}
           >
             <a
-              href="/resume.pdf"
+              href="/CV_of_Md_Sazzad_Hossain_Junior_Full_Stack_Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-green inline-block leading-none text-sm mt-3.5 md:mt-0 ml-3 font-mono bg-transparent border border-green rounded hover:bg-greenTint py-3 px-4 transition-all duration-300 ease-in-out"

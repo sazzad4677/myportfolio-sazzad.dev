@@ -1,57 +1,70 @@
-import React, { useState } from "react";
-import SectionHeader from "../Shared/SectionHeader";
+import React from "react";
 
 const Experience = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  // const [tabIndex, setTabIndex] = useState(0);
 
-  const jobs = [
-    {
-      company: 'Beweddy',
-      name: 'Beweddy',
-      position: 'Software Engineer',
-      range: 'July 2021 - Present',
-      website: 'https://www.beweddy.com/',
-      description: [
-        {
-          item: 'Work with a variety of different platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, Next.js, Express and MongoDB.',
-        },
-        {
-          item: 'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',
-        },
-      ],
-    },
-    {
-      company: 'IBBL',
-      name: 'Islami Bank Bangladesh Limited',
-      position: 'Computer Operator',
-      range: 'Sep 2020 - Feb 2021',
-      website: 'https://www.islamibankbd.com/',
-      description: [
-        {
-          item: 'Opening / modifying / closing accounts on the system including scanning of signatures duly authorised by competent official.',
-        },
-        {
-          item: 'Add / modify / delete records in masters and parameter files jointly with higher authority.',
-        },
-        {
-          item: "Accept, modify and delete standing instructions as per customer's instructions. etc...",
-        },
-      ],
-    },
-    {
-      company: 'TechrZ IT',
-      name: 'TechrZ IT',
-      position: 'Web Developer',
-      range: 'May 2017 - Present',
-    },
-  ]
-  const job = jobs[tabIndex];
+  // const jobs = [
+  //   {
+  //     company: "Beweddy",
+  //     name: "Beweddy",
+  //     position: "Software Engineer",
+  //     range: "July 2021 - Present",
+  //     website: "https://www.beweddy.com/",
+  //     description: [
+  //       {
+  //         item: "Work with a variety of different platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, Next.js, Express and MongoDB.",
+  //       },
+  //       {
+  //         item: "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     company: "IBBL",
+  //     name: "Islami Bank Bangladesh Limited",
+  //     position: "Computer Operator",
+  //     range: "Sep 2020 - Feb 2021",
+  //     website: "https://www.islamibankbd.com/",
+  //     description: [
+  //       {
+  //         item: "Opening / modifying / closing accounts on the system including scanning of signatures duly authorised by competent official.",
+  //       },
+  //       {
+  //         item: "Add / modify / delete records in masters and parameter files jointly with higher authority.",
+  //       },
+  //       {
+  //         item: "Accept, modify and delete standing instructions as per customer's instructions. etc...",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     company: "TechrZ IT",
+  //     name: "TechrZ IT",
+  //     position: "Web Developer",
+  //     range: "May 2017 - Present",
+  //   },
+  // ];
+  // const job = jobs[tabIndex];
   return (
-    <section id="jobs" className="md:min-h-full max-w-[700px] py-[50px] md:py-[100px]">
-      <SectionHeader sectionId="02." name="Where I've Worked" />
+    <section
+      id="jobs"
+      className="md:min-h-full max-w-[700px] py-[50px] md:py-[100px]"
+    >
+      <div className="flex items-center space-x-4 mt-5 mb-10 ">
+        <h2
+          className={`font-bold capitalize text-lightestSlate font-sans before:content-['02.'] before:text-xl before:text-green before:font-mono before:mr-2.5 whitespace-nowrap text-[clamp(26px,5vw,32px)]`}
+        >
+          Where I've worked
+        </h2>
+        <span className="w-52 h-px bg-boatswain" />
+      </div>
       <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 font-sans overflow-x-auto">
         <div>
-            <h1>I currently do not have any professional experience to mention, however I have worked on a variety of projects, which you may see listed below.</h1>
+          <h1>
+            I currently do not have any professional experience to mention,
+            however I have worked on a variety of projects, which you may see
+            listed below.
+          </h1>
           {/* <div className="flex md:flex-col relative w-max ">
             <div
               className={`tab-indicator absolute md:top-0 bottom-0 left-0 md:w-[2px] h-[2px] md:h-[42px] bg-green transition-transform duration-200 ease-transition `}
