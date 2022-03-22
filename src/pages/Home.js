@@ -10,11 +10,17 @@ import Works from "../component/Works/Works";
 import Footer from "../component/Footer/Footer";
 import Contact from "../component/Contact/Contact";
 import Archive from "../component/Archive/Archive";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Sazzad</title>
+        <link rel="canonical" href="https://sazzad.dev" />
+      </Helmet>
       {loading ? (
         <Loader {...{ loading, setLoading }} />
       ) : (
@@ -26,10 +32,10 @@ const Home = () => {
             <Email />
             <About />
             <Experience />
-            <Works/>
-            <Archive/>
-            <Contact/>
-            <Footer/>
+            <Works />
+            <Archive />
+            <Contact />
+            <Footer />
           </div>
         </>
       )}
