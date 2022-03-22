@@ -22,7 +22,7 @@ const Contact = () => {
       </div>
       <div className="mt-[55px] flex items-center justify-center">
         <a
-          href={`mailto:sazzad4677@gmail.com`}
+          href={`mailto:sazzadhossain724@gmail.com`}
           className="ease-ease-transition rounded-[4px] border-2 border-green px-6 py-3 font-mono leading-[1] text-green transition-colors duration-300 hover:bg-greenTint md:px-7 md:py-4"
         >
           Say Hello
