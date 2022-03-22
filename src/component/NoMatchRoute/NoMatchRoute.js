@@ -10,7 +10,7 @@ const NoMatchRoute = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>404 Page Not Found - Sazzad</title>
+        <title>Page Not Found - Sazzad</title>
         <link rel="canonical" href="https://sazzad.dev" />
       </Helmet>
       <Header />
