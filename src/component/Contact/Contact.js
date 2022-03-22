@@ -25,7 +25,7 @@ const Contact = () => {
           href={`mailto:sazzad4677@gmail.com`}
           className="px-6 py-3 md:px-7 md:py-4 border-2 border-green text-green font-mono leading-[1] rounded-[4px] hover:bg-greenTint transition-colors duration-300 ease-ease-transition"
         >
-          Say Hello 👋
+          Say Hello
         </a>
       </div>
     </section>
