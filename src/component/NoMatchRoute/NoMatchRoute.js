@@ -3,12 +3,18 @@ import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Email from "../Socials/Email";
 import Socials from "../Socials/Socials";
+import { Helmet } from "react-helmet";
 
 const NoMatchRoute = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>404 Page Not Found - Sazzad</title>
+        <link rel="canonical" href="https://sazzad.dev" />
+      </Helmet>
       <Header />
-      <div className=" py-12 md:py-24 flex flex-col items-center justify-center">
+      <div className=" flex flex-col items-center justify-center py-12 md:py-24">
         <h1
           className="text- text-center font-mono text-green"
           style={{ fontSize: "clamp(100px, 25vw, 200px)" }}
@@ -28,8 +34,8 @@ const NoMatchRoute = () => {
           Go back Home
         </Link>
       </div>
-      <Socials/>
-      <Email/>
+      <Socials />
+      <Email />
     </div>
   );
 };
