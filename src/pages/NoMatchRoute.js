@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../Header/Header";
-import Email from "../Socials/Email";
-import Socials from "../Socials/Socials";
+import Header from "../component/Header/Header";
+import Email from "../component/Socials/Email";
+import Socials from "../component/Socials/Socials";
 import { Helmet } from "react-helmet";
 
 const NoMatchRoute = () => {

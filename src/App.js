@@ -1,15 +1,20 @@
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import NoMatchRoute from "./component/NoMatchRoute/NoMatchRoute";
-import Home from "./pages/Home";
+import Loader from "./component/Loader/Loader";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const NoMatchRoute = React.lazy(() => import("./pages/NoMatchRoute.js"));
 
 function App() {
   return (
-    <div className="App bg-libertyBlue">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NoMatchRoute />} />
-      </Routes>
+    <div className="App bg-navy">
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NoMatchRoute />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

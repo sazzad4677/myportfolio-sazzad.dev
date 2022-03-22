@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <header
-      className={`z-50 h-auto backdrop-filter backdrop-blur bg-libertyBlue absolute flex items-center w-full px-6 md:py-0 md:px-10 ${
+      className={`z-50 h-auto backdrop-filter backdrop-blur bg-navy absolute flex items-center w-full px-6 md:py-0 md:px-10 ${
         scrollPosition >= 120
           ? "header-active py-4 md:h-16 bg-opacity-80"
           : "md:h-24 py-5"
