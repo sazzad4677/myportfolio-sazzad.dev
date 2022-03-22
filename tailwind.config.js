@@ -4,7 +4,6 @@ module.exports = {
     extend: {
       colors: {
         navy: "#0a192f",
-        libertyBlue: "#0A192F",
         lightNavy: "#112240",
         lightestNavy: "#233554",
         navyShadow: "rgba(2, 12, 27, 0.7)",

@@ -44,7 +44,7 @@ const Loader = ({ setLoading }) => {
     <AnimatePresence>
       <motion.div
         key="loader"
-        className="fixed inset-0 z-[99] flex h-screen w-full items-center justify-center bg-libertyBlue"
+        className="fixed inset-0 z-[99] flex h-screen w-full items-center justify-center bg-navy"
       >
         <div className="h-32 w-32 text-green">
           <motion.svg
@@ -79,8 +79,8 @@ const Loader = ({ setLoading }) => {
               fill="currentColor"
               fontSize="55px"
               fontFamily="font-mono"
-              dominant-baseline="middle"
-              text-anchor="middle"
+              dominantBaseline="middle"
+              textAnchor="middle"
             >
               S
             </motion.text>

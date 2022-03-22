@@ -1,19 +1,19 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 const Email = () => {
   return (
-    <div className="hidden fixed bottom-0 md:right-5 lg:right-8 z-10 md:flex flex-col items-center space-y-5">
-      <div className="font-mono text-sm leading-[18px] text-slate transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition">
+    <div className="fixed bottom-0 z-10 hidden flex-col items-center space-y-5 md:right-5 md:flex lg:right-8">
+      <div className="scale-90 transform font-mono text-sm leading-[18px] text-slate transition-transform duration-300 ease-transition hover:scale-100">
         <a
-          href="mailto:sazzad4677@gmail.com"
-          className="inline-block no-underline antialiased hover:text-green tracking-widest "
+          href="mailto:sazzadhossain724@gmail.com"
+          className="inline-block tracking-widest no-underline antialiased hover:text-green "
           target="_blank"
           rel="noopener noreferrer"
           style={{
             writingMode: " vertical-rl",
           }}
         >
-          sazzad4677@gmail.com
+          sazzadhossain724@gmail.com
         </a>
       </div>
       <motion.span
@@ -22,7 +22,7 @@ const Email = () => {
           opacity: 1,
           transition: { ease: "easeInOut", duration: 0.5, delay: 0.1 },
         }}
-        className="w-[1px] h-32 bg-lightestSlate"
+        className="h-32 w-[1px] bg-lightestSlate"
       />
     </div>
   );
