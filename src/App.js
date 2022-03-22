@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import NoMatchRoute from "./component/NoMatchRoute/NoMatchRoute";
 import Home from "./pages/Home";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <div className="App bg-libertyBlue">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<NoMatchRoute />} />
       </Routes>
     </div>
   );
