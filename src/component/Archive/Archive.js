@@ -60,7 +60,7 @@ const Archive = () => {
       technologies: ["Html", "CSS"],
       links: {
         github: "https://github.com/sazzad4677/Omni-Food",
-        liveLink: "https://omnifood-1234.netlify.app/",
+        liveLink: "https://omnifoodbd.netlify.app/",
       },
     },
   ];
