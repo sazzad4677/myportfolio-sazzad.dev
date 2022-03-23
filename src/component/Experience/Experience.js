@@ -1,4 +1,5 @@
 import React from "react";
+import { Element } from "react-scroll/modules";
 
 const Experience = () => {
   // const [tabIndex, setTabIndex] = useState(0);
@@ -46,26 +47,27 @@ const Experience = () => {
   // ];
   // const job = jobs[tabIndex];
   return (
-    <section
-      id="jobs"
-      className="md:min-h-full max-w-[700px] py-[50px] md:py-[100px]"
-    >
-      <div className="flex items-center space-x-4 mt-5 mb-10 ">
-        <h2
-          className={`font-bold capitalize text-lightestSlate font-sans before:content-['02.'] before:text-xl before:text-green before:font-mono before:mr-2.5 whitespace-nowrap text-[clamp(26px,5vw,32px)]`}
-        >
-          Where I've worked
-        </h2>
-        <span className="w-52 h-px bg-boatswain" />
-      </div>
-      <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 font-sans overflow-x-auto">
-        <div>
-          <h1>
-            I currently do not have any professional experience to mention,
-            however I have worked on a variety of projects, which you may see
-            listed below.
-          </h1>
-          {/* <div className="flex md:flex-col relative w-max ">
+    <Element name="jobs">
+      <section
+        id="jobs"
+        className="max-w-[700px] py-[50px] md:min-h-full md:py-[100px]"
+      >
+        <div className="mt-5 mb-10 flex items-center space-x-4 ">
+          <h2
+            className={`whitespace-nowrap font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-lightestSlate before:mr-2.5 before:font-mono before:text-xl before:text-green before:content-['02.']`}
+          >
+            Where I've worked
+          </h2>
+          <span className="h-px w-52 bg-boatswain" />
+        </div>
+        <div className="flex flex-col space-y-10 overflow-x-auto font-sans md:flex-row md:space-y-0 md:space-x-10">
+          <div>
+            <h1>
+              I currently do not have any professional experience to mention,
+              however I have worked on a variety of projects, which you may see
+              listed below.
+            </h1>
+            {/* <div className="flex md:flex-col relative w-max ">
             <div
               className={`tab-indicator absolute md:top-0 bottom-0 left-0 md:w-[2px] h-[2px] md:h-[42px] bg-green transition-transform duration-200 ease-transition `}
               // style={{ transform: `translateY(calc(${tabIndex} * 42px))` }}
@@ -95,8 +97,8 @@ const Experience = () => {
               </button>
             ))}
           </div> */}
-        </div>
-        {/* <div>
+          </div>
+          {/* <div>
           <h3 className="text-2xl mb-2 font-semibold flex flex-wrap items-center">
             <span className="text-lightestSlate whitespace-nowrap">
               {job.position}
@@ -125,8 +127,9 @@ const Experience = () => {
             </ul>
           )}
         </div> */}
-      </div>
-    </section>
+        </div>
+      </section>
+    </Element>
   );
 };
 

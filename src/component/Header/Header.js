@@ -1,10 +1,9 @@
-// import Link from 'next/link';
 import { Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
 import useScrollPosition from "../../hooks/useScrollPosition";
+import { Link as ReactScrollLink } from "react-scroll";
 
 const Header = () => {
   const scrollPosition = useScrollPosition();
@@ -15,31 +14,31 @@ const Header = () => {
   const navLinks = [
     {
       name: "About",
-      url: "/#about",
+      url: "about",
     },
     {
       name: "Experience",
-      url: "/#jobs",
+      url: "jobs",
     },
     {
       name: "Work",
-      url: "/#projects",
+      url: "projects",
     },
     {
       name: "Contact",
-      url: "/#contact",
+      url: "contact",
     },
   ];
 
   return (
     <header
-      className={`z-50 h-auto backdrop-filter backdrop-blur bg-navy absolute flex items-center w-full px-6 md:py-0 md:px-10 ${
+      className={`absolute z-50 flex h-auto w-full items-center bg-navy px-6 backdrop-blur backdrop-filter md:py-0 md:px-10 ${
         scrollPosition >= 120
-          ? "header-active py-4 md:h-16 bg-opacity-80"
-          : "md:h-24 py-5"
+          ? "header-active bg-opacity-80 py-4 md:h-16"
+          : "py-5 md:h-24"
       }`}
     >
-      <nav className="flex flex-col md:flex-row md:items-center justify-center md:justify-between w-full relative">
+      <nav className="relative flex w-full flex-col justify-center md:flex-row md:items-center md:justify-between">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{
@@ -50,8 +49,16 @@ const Header = () => {
           className="w-8 md:w-11"
         >
           {/* Logo */}
-          <Link to="/">
-            <div className="text-green w-full h-full transition-all duration-300 ease-in-out tracking-wide">
+          <ReactScrollLink
+            className="cursor-pointer"
+            activeClass="text-green"
+            to="home"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            duration={1000}
+          >
+            <div className="h-full w-full tracking-wide text-green transition-all duration-300 ease-in-out">
               <svg
                 id="logo"
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +86,7 @@ const Header = () => {
                 </text>
               </svg>
             </div>
-          </Link>
+          </ReactScrollLink>
         </motion.div>
         <Transition
           appear={true}
@@ -90,7 +97,7 @@ const Header = () => {
           leave="transition-opacity duration-500 ease-transition"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="flex flex-col  md:flex-row md:items-center mt-5 md:mt-0"
+          className="mt-5 flex  flex-col md:mt-0 md:flex-row md:items-center"
         >
           <motion.ol
             initial={{ opacity: 0, y: 10 }}
@@ -102,7 +109,7 @@ const Header = () => {
                 ease: "easeInOut",
               },
             }}
-            className="flex flex-col md:flex-row md:items-center md:justify-between list-outside"
+            className="flex list-outside flex-col md:flex-row md:items-center md:justify-between"
           >
             {navLinks.map((link, index) => (
               <Transition.Child
@@ -114,11 +121,19 @@ const Header = () => {
                 leave="transition-opacity delay-600 transition-transform duration-500 ease-transition"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
-                className="md:mx-1 py-3 md:py-0 relative count font-mono text-sm leading-none text-lightestSlate hover:text-green transition-colors duration-300 "
+                className="count relative py-3 font-mono text-sm leading-none text-lightestSlate transition-colors duration-300 hover:text-green md:mx-1 md:py-0 "
               >
-                <a className="p-2.5 count-item " href={link.url}>
+                <ReactScrollLink
+                  className="count-item cursor-pointer p-2.5"
+                  activeClass="text-green"
+                  to={link.url}
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={1000}
+                >
                   {link.name}
-                </a>
+                </ReactScrollLink>
               </Transition.Child>
             ))}
           </motion.ol>
@@ -137,14 +152,14 @@ const Header = () => {
               href="https://drive.google.com/uc?id=1_FcR5vrWgUlW2g3MoeZN_uRtMC5Cfnq5&export=download"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green inline-block leading-none text-sm mt-3.5 md:mt-0 ml-3 font-mono bg-transparent border border-green rounded hover:bg-greenTint py-3 px-4 transition-all duration-300 ease-in-out"
+              className="mt-3.5 ml-3 inline-block rounded border border-green bg-transparent py-3 px-4 font-mono text-sm leading-none text-green transition-all duration-300 ease-in-out hover:bg-greenTint md:mt-0"
             >
               Resume
             </a>
           </motion.div>
         </Transition>
         <button
-          className={`menu-toggle-btn inline-block md:hidden focus:outline-none  absolute top-0 right-0 ${
+          className={`menu-toggle-btn absolute top-0 right-0  inline-block focus:outline-none md:hidden ${
             isOpen && "menu-toggle-btn-open"
           }`}
           onClick={() => setIsOpen((prev) => !prev)}
