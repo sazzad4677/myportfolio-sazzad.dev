@@ -56,7 +56,7 @@ const Header = () => {
             spy={true}
             smooth={true}
             hashSpy={true}
-            duration={1000}
+            duration={!isTabletOrMobile ? 1000 : 500}
           >
             <div className="h-full w-full tracking-wide text-green transition-all duration-300 ease-in-out">
               <svg
