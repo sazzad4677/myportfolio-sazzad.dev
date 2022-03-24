@@ -44,7 +44,7 @@ const Works = () => {
   ];
   return (
     <Element name="projects">
-      <section id="projects" className="min-h-[75vh] py-12 md:py-24">
+      <section className="min-h-[75vh] py-12 md:py-24">
         <div className="mt-5 mb-10 flex items-center space-x-4 ">
           <h2
             className={`whitespace-nowrap font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-lightestSlate before:mr-2.5 before:font-mono before:text-xl before:text-green before:content-['03.']`}
@@ -53,11 +53,11 @@ const Works = () => {
           </h2>
           <span className="h-px w-52 bg-boatswain" />
         </div>
-        <ul className="space-y-12 md:space-y-28">
+        <ul className="space-y-12 md:space-y-28 ">
           {features.map((project, index) => (
             <li
               key={index}
-              className={`grid grid-cols-12 items-center gap-3 ${
+              className={`grid grid-cols-12 items-center gap-3 group ${
                 (index + 1) % 2 === 0 ? "text-left" : "md:text-right"
               }`}
             >
@@ -153,7 +153,7 @@ const Works = () => {
                 </div>
               </div>
               <div
-                className={`group relative bg-green transition-all duration-200 ease-transition  ${
+                className={`relative bg-green transition-all duration-200 ease-transition  ${
                   (index + 1) % 2 === 0
                     ? "col-span-full row-span-full md:col-start-6 md:col-end-[-1] "
                     : "col-span-full row-span-full md:col-start-1 md:col-end-8 "
