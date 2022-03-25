@@ -149,7 +149,7 @@ const Header = () => {
             }}
           >
             <a
-              href="https://drive.google.com/uc?id=1_FcR5vrWgUlW2g3MoeZN_uRtMC5Cfnq5&export=download"
+              href="https://drive.google.com/file/d/1AUzR807bZylIVFJogLWeAGsk_QuQGf8n/view"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3.5 ml-3 inline-block rounded border border-green bg-transparent py-3 px-4 font-mono text-sm leading-none text-green transition-all duration-300 ease-in-out hover:bg-greenTint md:mt-0"
