@@ -2,50 +2,50 @@ import React from "react";
 import { Element } from "react-scroll/modules";
 
 const Experience = () => {
-  // const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(0);
 
-  // const jobs = [
-  //   {
-  //     company: "Beweddy",
-  //     name: "Beweddy",
-  //     position: "Software Engineer",
-  //     range: "July 2021 - Present",
-  //     website: "https://www.beweddy.com/",
-  //     description: [
-  //       {
-  //         item: "Work with a variety of different platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, Next.js, Express and MongoDB.",
-  //       },
-  //       {
-  //         item: "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     company: "IBBL",
-  //     name: "Islami Bank Bangladesh Limited",
-  //     position: "Computer Operator",
-  //     range: "Sep 2020 - Feb 2021",
-  //     website: "https://www.islamibankbd.com/",
-  //     description: [
-  //       {
-  //         item: "Opening / modifying / closing accounts on the system including scanning of signatures duly authorised by competent official.",
-  //       },
-  //       {
-  //         item: "Add / modify / delete records in masters and parameter files jointly with higher authority.",
-  //       },
-  //       {
-  //         item: "Accept, modify and delete standing instructions as per customer's instructions. etc...",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     company: "TechrZ IT",
-  //     name: "TechrZ IT",
-  //     position: "Web Developer",
-  //     range: "May 2017 - Present",
-  //   },
-  // ];
-  // const job = jobs[tabIndex];
+  const jobs = [
+    {
+      company: "Buyonia Bangladesh Limited",
+      name: "Buyonia",
+      position: "Software Engineer",
+      range: "April 2022 - Present",
+      website: "https://www.buyoniasoft.com/",
+      description: [
+        {
+          item: "I have extensive experience working with a diverse range of platforms, frameworks, and content management systems. These include JavaScript, TypeScript, React, Next.js, Express, and MongoDB. I am adept at leveraging these technologies to deliver high-quality solutions and optimize business operations.",
+        },
+        {
+          item: "Demonstrated success in managing server infrastructure with AWS, leading and motivating teams, and fostering strong relationships with colleagues.",
+        },
+      ],
+    },
+    // {
+    //   company: "IBBL",
+    //   name: "Islami Bank Bangladesh Limited",
+    //   position: "Computer Operator",
+    //   range: "Sep 2020 - Feb 2021",
+    //   website: "https://www.islamibankbd.com/",
+    //   description: [
+    //     {
+    //       item: "Opening / modifying / closing accounts on the system including scanning of signatures duly authorised by competent official.",
+    //     },
+    //     {
+    //       item: "Add / modify / delete records in masters and parameter files jointly with higher authority.",
+    //     },
+    //     {
+    //       item: "Accept, modify and delete standing instructions as per customer's instructions. etc...",
+    //     },
+    //   ],
+    // },
+    // {
+    //   company: "TechrZ IT",
+    //   name: "TechrZ IT",
+    //   position: "Web Developer",
+    //   range: "May 2017 - Present",
+    // },
+  ];
+  const job = jobs[tabIndex];
   return (
     <Element name="jobs">
       <section
@@ -62,12 +62,12 @@ const Experience = () => {
         </div>
         <div className="flex flex-col space-y-10 overflow-x-auto font-sans md:flex-row md:space-y-0 md:space-x-10">
           <div>
-            <h1>
-              I currently do not have any professional experience to mention,
-              however I have worked on a variety of projects, which you may see
-              listed below.
-            </h1>
-            {/* <div className="flex md:flex-col relative w-max ">
+            // <h1>
+            //   I currently do not have any professional experience to mention,
+            //   however I have worked on a variety of projects, which you may see
+            //   listed below.
+            // </h1>
+          <div className="flex md:flex-col relative w-max ">
             <div
               className={`tab-indicator absolute md:top-0 bottom-0 left-0 md:w-[2px] h-[2px] md:h-[42px] bg-green transition-transform duration-200 ease-transition `}
               // style={{ transform: `translateY(calc(${tabIndex} * 42px))` }}
@@ -96,9 +96,9 @@ const Experience = () => {
                 <span>{job.company}</span>
               </button>
             ))}
-          </div> */}
           </div>
-          {/* <div>
+          </div>
+          <div>
           <h3 className="text-2xl mb-2 font-semibold flex flex-wrap items-center">
             <span className="text-lightestSlate whitespace-nowrap">
               {job.position}
@@ -126,7 +126,7 @@ const Experience = () => {
               ))}
             </ul>
           )}
-        </div> */}
+        </div>
         </div>
       </section>
     </Element>
