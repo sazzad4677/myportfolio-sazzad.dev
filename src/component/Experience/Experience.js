@@ -62,15 +62,10 @@ const Experience = () => {
         </div>
         <div className="flex flex-col space-y-10 overflow-x-auto font-sans md:flex-row md:space-y-0 md:space-x-10">
           <div>
-            // <h1>
-            //   I currently do not have any professional experience to mention,
-            //   however I have worked on a variety of projects, which you may see
-            //   listed below.
-            // </h1>
           <div className="flex md:flex-col relative w-max ">
             <div
               className={`tab-indicator absolute md:top-0 bottom-0 left-0 md:w-[2px] h-[2px] md:h-[42px] bg-green transition-transform duration-200 ease-transition `}
-              // style={{ transform: `translateY(calc(${tabIndex} * 42px))` }}
+              style={{ transform: `translateY(calc(${tabIndex} * 42px))` }}
             />
             <style jsx>{`
               @media (max-width: 767px) {
