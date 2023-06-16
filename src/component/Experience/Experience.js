@@ -2,7 +2,7 @@ import React from "react";
 import { Element } from "react-scroll/modules";
 
 const Experience = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = React.useState(0);
 
   const jobs = [
     {
