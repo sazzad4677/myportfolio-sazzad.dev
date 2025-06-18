@@ -28,35 +28,16 @@ const About = () => {
           <div className="space-y-5">
             <div className="space-y-5 font-sans">
               <div>
-                <p className="text-xl leading-[1.3] text-slate">
-                  I'm a knowledgeable and enthusiastic{" "}
-                  <span className="text-green">Full-Stack Developer</span> who
-                  puts an emphasis on efficiency and lifelong learning. I am
-                  respectful and excited about Web Applications and everything
-                  related to them. I'm interested in web programming, app
-                  development, and website creation. Working in this industry
-                  gives me the opportunity to learn new things and get new
-                  perspectives.
-                </p>
-                <p className="mt-3 text-xl leading-[1.3] text-slate">
-                  My goal is to design programs that are both{" "}
-                  <span className="text-green"> scalable and efficient</span> ,
-                  as well as user experiences that are captivating and
-                  pixel-perfect.
-                </p>
-                <p className="mt-3 text-xl leading-[1.3] text-slate">
-                  As a result, I'm looking for a company willing to recruit me
-                  as a developer. In exchange, I pledge to give 100% of my work
-                  and to be a pleasant and courteous team member. I'm looking
-                  for a{" "}
-                  <span className="text-green">
-                    web development job or internship
-                  </span>{" "}
-                  right now. I'm always on the lookout for new ways to learn and
-                  accomplish more.
-                </p>
+                  <p className="text-xl leading-[1.3] text-slate">
+                    I'm a passionate <span className="text-green">Full-Stack Developer</span> focused on efficiency and continuous learning. I specialize in web applications, app development, and website creation.
+                  </p>
+                  <p className="mt-3 text-xl leading-[1.3] text-slate">
+                    My goal is to create <span className="text-green">scalable, efficient</span> programs and engaging, pixel-perfect user experiences.
+                  </p>
+                  <p className="mt-3 text-xl leading-[1.3] text-slate">
+                    I'm currently seeking a <span className="text-green">web development job or internship</span> and am eager to contribute as a dedicated, positive team member.
+                  </p>
               </div>
-
               <p className="ml-1 mt-5 text-xl text-slate ">
                 Here are a few technologies I've been working with recently:
               </p>
