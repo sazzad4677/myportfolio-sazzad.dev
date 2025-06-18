@@ -35,7 +35,7 @@ const About = () => {
                     My goal is to create <span className="text-green">scalable, efficient</span> programs and engaging, pixel-perfect user experiences.
                   </p>
                   <p className="mt-3 text-xl leading-[1.3] text-slate">
-                    I'm currently seeking a <span className="text-green">web development job or internship</span> and am eager to contribute as a dedicated, positive team member.
+                    I'm currently seeking a <span className="text-green">web development job </span> and am eager to contribute as a dedicated, positive team member.
                   </p>
               </div>
               <p className="ml-1 mt-5 text-xl text-slate ">
