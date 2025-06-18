@@ -6,10 +6,40 @@ const Experience = () => {
 
   const jobs = [
     {
+      company: "MMHI",
+      name: "MyMedical Hub International",
+      position: "Software Enginner",
+      range: "March 2024 - Present",
+      website: "https://mymedicalhub.com/",
+      description: [
+              {
+                item: "Developed and maintained responsive, user-friendly web interfaces for the company’s healthcare platform, improving patient and provider engagement.",
+              },
+              {
+                item: "Collaborated with UX/UI designers to implement modern, accessible designs using HTML, CSS, and JavaScript frameworks.",
+              },
+              {
+                item: "Optimized web applications for performance, ensuring fast load times and seamless functionality across multiple devices and browsers.",
+              },
+              {
+                item: "Integrated frontend components with backend APIs to enable dynamic data display and interactive features.",
+              },
+              {
+                item: "Participated in code reviews and worked closely with the development team to maintain high code quality and adhere to best practices.",
+              },
+              {
+                item: "Troubleshot and resolved frontend bugs and issues promptly, contributing to enhanced user satisfaction.",
+              },
+              {
+                item: "Stayed updated with the latest frontend technologies to continuously improve the application’s interface and user experience.",
+              }
+      ],
+    },
+    {
       company: "Buyonia Bangladesh Limited",
       name: "Buyonia",
       position: "Software Engineer",
-      range: "April 2022 - Present",
+      range: "April 2022 - March 2024",
       website: "https://www.buyoniasoft.com/",
       description: [
         {
@@ -20,30 +50,6 @@ const Experience = () => {
         },
       ],
     },
-    // {
-    //   company: "IBBL",
-    //   name: "Islami Bank Bangladesh Limited",
-    //   position: "Computer Operator",
-    //   range: "Sep 2020 - Feb 2021",
-    //   website: "https://www.islamibankbd.com/",
-    //   description: [
-    //     {
-    //       item: "Opening / modifying / closing accounts on the system including scanning of signatures duly authorised by competent official.",
-    //     },
-    //     {
-    //       item: "Add / modify / delete records in masters and parameter files jointly with higher authority.",
-    //     },
-    //     {
-    //       item: "Accept, modify and delete standing instructions as per customer's instructions. etc...",
-    //     },
-    //   ],
-    // },
-    // {
-    //   company: "TechrZ IT",
-    //   name: "TechrZ IT",
-    //   position: "Web Developer",
-    //   range: "May 2017 - Present",
-    // },
   ];
   const job = jobs[tabIndex];
   return (
