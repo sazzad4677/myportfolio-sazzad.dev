@@ -5,7 +5,7 @@ const Email = () => {
     <div className="fixed bottom-0 z-10 hidden flex-col items-center space-y-5 md:right-5 md:flex lg:right-8">
       <div className="scale-90 transform font-mono text-sm leading-[18px] text-slate transition-transform duration-300 ease-transition hover:scale-100">
         <a
-          href="mailto:sazzadhossain724@gmail.com"
+          href="mailto:sazzad4677@gmail.com"
           className="inline-block tracking-widest no-underline antialiased hover:text-green "
           target="_blank"
           rel="noopener noreferrer"
@@ -13,7 +13,7 @@ const Email = () => {
             writingMode: " vertical-rl",
           }}
         >
-          sazzadhossain724@gmail.com
+          sazzad4677@gmail.com
         </a>
       </div>
       <motion.span
