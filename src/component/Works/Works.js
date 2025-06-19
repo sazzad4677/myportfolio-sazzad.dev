@@ -9,12 +9,9 @@ const Works = () => {
       technologies: [
         "React",
         "TypeScript",
-        "Tailwind CSS",
-        "ShadCN UI",
-        "ESLint",
-        "Express Js",
+        "ExpressJs",
         "Mongoose",
-        "JWT"
+        "Redux"
       ],
       links: {
         github: "https://github.com/sazzad4677/Stationary-Shop-Frontend",
