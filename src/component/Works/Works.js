@@ -3,6 +3,28 @@ import { Element } from "react-scroll/modules";
 const Works = () => {
   const features = [
     {
+      title: "Stationary Shop",
+      description:
+        "Built a modern, responsive frontend for an online stationary shop using React, TypeScript, Vite, Tailwind CSS, ESLint, Node Js, Express Js, Mongoose and ShadCN UI. Features include dynamic product filtering, a functional shopping cart, and mobile-friendly design. Ensured code quality with ESLint and a type-safe architecture.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "ShadCN UI",
+        "ESLint",
+        "Node Js",
+        "Express Js",
+        "Mongoose",
+        "JWT"
+      ],
+      links: {
+        github: "https://github.com/sazzad4677/Stationary-Shop-Frontend",
+        external: "https://stationary-shop-frontend-silk.vercel.app/",
+      },
+      image: { url: "Pappier.png" },
+    },
+    {
       title: "Cutly - Link Shortener",
       description:
         "A web application for shortening long URLs. Here I used a url validator. I didn't use any third-party APIs. Instead, I built my own API with my proper error handling.",
@@ -57,16 +79,14 @@ const Works = () => {
           {features.map((project, index) => (
             <li
               key={index}
-              className={`grid grid-cols-12 items-center gap-3 group ${
-                (index + 1) % 2 === 0 ? "text-left" : "md:text-right"
-              }`}
+              className={`grid grid-cols-12 items-center gap-3 group ${(index + 1) % 2 === 0 ? "text-left" : "md:text-right"
+                }`}
             >
               <div
-                className={`relative z-10 col-span-full row-span-full h-full bg-lightNavy px-10 py-6 opacity-90 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:opacity-100 md:shadow-none ${
-                  (index + 1) % 2 === 0
+                className={`relative z-10 col-span-full row-span-full h-full bg-lightNavy px-10 py-6 opacity-90 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:opacity-100 md:shadow-none ${(index + 1) % 2 === 0
                     ? " md:col-start-1 md:col-end-[7] "
                     : " md:col-start-5 md:col-end-[-1] lg:col-start-7 "
-                }`}
+                  }`}
               >
                 <p className="font-regular my-[10px] font-mono text-sm text-green">
                   Featured Project
@@ -85,22 +105,20 @@ const Works = () => {
                   <p>{project.description}</p>
                 </div>
                 <ul
-                  className={`mt-2 flex flex-wrap items-center space-x-5 font-mono text-xs text-green ${
-                    (index + 1) % 2 === 0
+                  className={`mt-2 flex flex-wrap items-center space-x-5 font-mono text-xs text-green ${(index + 1) % 2 === 0
                       ? "justify-end md:justify-start"
                       : "justify-end"
-                  }`}
+                    }`}
                 >
                   {project.technologies.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
                 <div
-                  className={`mt-2 flex items-center transition-colors duration-300 ease-transition ${
-                    (index + 1) % 2 === 0
+                  className={`mt-2 flex items-center transition-colors duration-300 ease-transition ${(index + 1) % 2 === 0
                       ? "justify-end md:justify-start"
                       : "justify-end"
-                  }`}
+                    }`}
                 >
                   {project.links.github && (
                     <a
@@ -153,11 +171,10 @@ const Works = () => {
                 </div>
               </div>
               <div
-                className={`relative bg-green transition-all duration-200 ease-transition  ${
-                  (index + 1) % 2 === 0
+                className={`relative bg-green transition-all duration-200 ease-transition  ${(index + 1) % 2 === 0
                     ? "col-span-full row-span-full md:col-start-6 md:col-end-[-1] "
                     : "col-span-full row-span-full md:col-start-1 md:col-end-8 "
-                }
+                  }
               `}
               >
                 <a
