@@ -58,7 +58,7 @@ const Hero = () => {
         </motion.div>
         <motion.div variants={item}>
           <a
-            href={`mailto:sazzadhossain724@gmail.com`}
+            href={`mailto:sazzad4677@gmail.com`}
             className="ease-ease-transition mt-[50px] block rounded-[4px] border-2 border-green px-6 py-4 font-mono leading-[1] text-green transition-colors duration-300 hover:bg-greenTint md:px-7 md:py-5"
           >
             Get In Touch
