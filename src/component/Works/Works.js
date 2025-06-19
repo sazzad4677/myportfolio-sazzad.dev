@@ -9,11 +9,9 @@ const Works = () => {
       technologies: [
         "React",
         "TypeScript",
-        "Vite",
         "Tailwind CSS",
         "ShadCN UI",
         "ESLint",
-        "Node Js",
         "Express Js",
         "Mongoose",
         "JWT"
