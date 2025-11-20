@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../../images/me.webp";
+
 import { Element } from "react-scroll";
 const About = () => {
   const skills = [
@@ -28,15 +28,15 @@ const About = () => {
           <div className="space-y-5">
             <div className="space-y-5 font-sans">
               <div>
-                  <p className="text-xl leading-[1.3] text-slate">
-                    I'm a passionate <span className="text-green">Full-Stack Developer</span> focused on efficiency and continuous learning. I specialize in web applications, app development, and website creation.
-                  </p>
-                  <p className="mt-3 text-xl leading-[1.3] text-slate">
-                    My goal is to create <span className="text-green">scalable, efficient</span> programs and engaging, pixel-perfect user experiences.
-                  </p>
-                  <p className="mt-3 text-xl leading-[1.3] text-slate">
-                    I'm currently seeking a <span className="text-green">web development job </span> and am eager to contribute as a dedicated, positive team member.
-                  </p>
+                <p className="text-xl leading-[1.3] text-slate">
+                  I'm a passionate <span className="text-green">Full-Stack Developer</span> focused on efficiency and continuous learning. I specialize in web applications, app development, and website creation.
+                </p>
+                <p className="mt-3 text-xl leading-[1.3] text-slate">
+                  My goal is to create <span className="text-green">scalable, efficient</span> programs and engaging, pixel-perfect user experiences.
+                </p>
+                <p className="mt-3 text-xl leading-[1.3] text-slate">
+                  I'm currently seeking a <span className="text-green">web development job </span> and am eager to contribute as a dedicated, positive team member.
+                </p>
               </div>
               <p className="ml-1 mt-5 text-xl text-slate ">
                 Here are a few technologies I've been working with recently:
@@ -61,7 +61,7 @@ const About = () => {
                   width="500"
                   height="500"
                   className="z-10 mix-blend-multiply grayscale filter transition-all duration-100 ease-transition  group-hover:mix-blend-normal group-hover:grayscale-0"
-                  src={myImage}
+                  src="/images/me.webp"
                   alt=""
                 />
               </div>
