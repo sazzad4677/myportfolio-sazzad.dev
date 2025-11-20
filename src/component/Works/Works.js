@@ -79,8 +79,8 @@ const Works = () => {
             >
               <div
                 className={`relative z-10 col-span-full row-span-full h-full bg-lightNavy px-10 py-6 opacity-90 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:opacity-100 md:shadow-none ${(index + 1) % 2 === 0
-                    ? " md:col-start-1 md:col-end-[7] "
-                    : " md:col-start-5 md:col-end-[-1] lg:col-start-7 "
+                  ? " md:col-start-1 md:col-end-[7] "
+                  : " md:col-start-5 md:col-end-[-1] lg:col-start-7 "
                   }`}
               >
                 <p className="font-regular my-[10px] font-mono text-sm text-green">
@@ -101,8 +101,8 @@ const Works = () => {
                 </div>
                 <ul
                   className={`mt-2 flex flex-wrap items-center space-x-5 font-mono text-xs text-green ${(index + 1) % 2 === 0
-                      ? "justify-end md:justify-start"
-                      : "justify-end"
+                    ? "justify-end md:justify-start"
+                    : "justify-end"
                     }`}
                 >
                   {project.technologies.map((item, index) => (
@@ -111,8 +111,8 @@ const Works = () => {
                 </ul>
                 <div
                   className={`mt-2 flex items-center transition-colors duration-300 ease-transition ${(index + 1) % 2 === 0
-                      ? "justify-end md:justify-start"
-                      : "justify-end"
+                    ? "justify-end md:justify-start"
+                    : "justify-end"
                     }`}
                 >
                   {project.links.github && (
@@ -167,8 +167,8 @@ const Works = () => {
               </div>
               <div
                 className={`relative bg-green transition-all duration-200 ease-transition  ${(index + 1) % 2 === 0
-                    ? "col-span-full row-span-full md:col-start-6 md:col-end-[-1] "
-                    : "col-span-full row-span-full md:col-start-1 md:col-end-8 "
+                  ? "col-span-full row-span-full md:col-start-6 md:col-end-[-1] "
+                  : "col-span-full row-span-full md:col-start-1 md:col-end-8 "
                   }
               `}
               >
@@ -180,7 +180,7 @@ const Works = () => {
                   <div>
                     <img
                       className="h-full w-full object-cover mix-blend-multiply brightness-90 grayscale filter transition-all duration-200 ease-transition group-hover:bg-transparent  group-hover:mix-blend-normal group-hover:grayscale-0 group-hover:filter-none "
-                      src={require(`../../images/${project.image.url}`)}
+                      src={`/images/${project.image.url}`}
                       alt={`${project.title} Screenshot`}
                     />
                   </div>

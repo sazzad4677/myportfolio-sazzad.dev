@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"], // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"], // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
