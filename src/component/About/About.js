@@ -55,12 +55,12 @@ const About = () => {
           </div>
           <div className="mx-auto max-w-[300px] ">
             <div className="group relative cursor-pointer shadow-2xl">
-              <div className="absolute top-7 left-7 z-0 h-full w-full rounded-lg border-4 border-green transition-all duration-200 ease-transition group-hover:top-6 group-hover:left-6 sm:top-9 sm:left-9"></div>
-              <div className="relative overflow-hidden rounded-lg bg-green">
+              <div className="absolute top-7 left-7 z-0 h-full w-full rounded-lg border-4 border-primary transition-all duration-200 ease-transition group-hover:top-6 group-hover:left-6 sm:top-9 sm:left-9"></div>
+              <div className="relative overflow-hidden rounded-lg bg-primary">
                 <img
                   width="500"
                   height="500"
-                  className="z-10 mix-blend-multiply grayscale filter transition-all duration-100 ease-transition  group-hover:mix-blend-normal group-hover:grayscale-0"
+                  className="z-10 mix-blend-multiply grayscale filter transition-all duration-100 ease-transition group-hover:mix-blend-normal group-hover:grayscale-0"
                   src="/images/me.webp"
                   alt=""
                 />
