@@ -18,35 +18,35 @@ const About = () => {
       <section id="about" className="min-h-full max-w-[900px] py-12 md:py-24">
         <div className="mt-5 mb-10 flex items-center space-x-4 ">
           <h2
-            className={`whitespace-nowrap font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-lightestSlate before:mr-2.5 before:font-mono before:text-xl before:text-green before:content-['01.']`}
+            className={`whitespace-nowrap font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-on-background before:mr-2.5 before:font-mono before:text-xl before:text-primary before:content-['01.']`}
           >
             About Me
           </h2>
-          <span className="h-px w-52 bg-boatswain" />
+          <span className="h-px w-52 bg-surface-variant" />
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[3fr,2fr]">
           <div className="space-y-5">
             <div className="space-y-5 font-sans">
               <div>
-                <p className="text-xl leading-[1.3] text-slate">
-                  I'm a passionate <span className="text-green">Full-Stack Developer</span> focused on efficiency and continuous learning. I specialize in web applications, app development, and website creation.
+                <p className="text-xl leading-[1.3] text-secondary">
+                  I'm a passionate <span className="text-primary">Full-Stack Developer</span> focused on efficiency and continuous learning. I specialize in web applications, app development, and website creation.
                 </p>
-                <p className="mt-3 text-xl leading-[1.3] text-slate">
-                  My goal is to create <span className="text-green">scalable, efficient</span> programs and engaging, pixel-perfect user experiences.
+                <p className="mt-3 text-xl leading-[1.3] text-secondary">
+                  My goal is to create <span className="text-primary">scalable, efficient</span> programs and engaging, pixel-perfect user experiences.
                 </p>
-                <p className="mt-3 text-xl leading-[1.3] text-slate">
-                  I'm currently seeking a <span className="text-green">web development job </span> and am eager to contribute as a dedicated, positive team member.
+                <p className="mt-3 text-xl leading-[1.3] text-secondary">
+                  I'm currently seeking a <span className="text-primary">web development job </span> and am eager to contribute as a dedicated, positive team member.
                 </p>
               </div>
-              <p className="ml-1 mt-5 text-xl text-slate ">
+              <p className="ml-1 mt-5 text-xl text-secondary ">
                 Here are a few technologies I've been working with recently:
               </p>
             </div>
-            <ul className="ml-1 grid list-inside grid-cols-[repeat(2,minmax(140px,200px))] gap-x-4 gap-y-2  font-mono text-sm tracking-normal text-slate">
+            <ul className="ml-1 grid list-inside grid-cols-[repeat(2,minmax(140px,200px))] gap-x-4 gap-y-2  font-mono text-sm tracking-normal text-secondary">
               {skills.map((skill, index) => (
                 <li
                   key={index}
-                  className="list-none before:text-sm before:text-green before:content-['▹']"
+                  className="list-none before:text-sm before:text-primary before:content-['▹']"
                 >
                   <span className="ml-3">{skill.name}</span>
                 </li>

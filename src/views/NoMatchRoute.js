@@ -10,7 +10,7 @@ const NoMatchRoute = () => {
       <Header />
       <div className=" flex flex-col items-center justify-center py-12 md:py-24">
         <h1
-          className="text- text-center font-mono text-green"
+          className="text- text-center font-mono text-primary"
           style={{ fontSize: "clamp(100px, 25vw, 200px)" }}
         >
           404
@@ -23,7 +23,7 @@ const NoMatchRoute = () => {
         </p>
         <Link
           href="/"
-          className="ease-ease-transition mt-[50px] block rounded-[4px] border-2 border-green px-6 py-4 text-center font-mono leading-[1] text-green transition-colors duration-300 hover:bg-greenTint md:px-7 md:py-5"
+          className="ease-ease-transition mt-[50px] block rounded-[4px] border-2 border-primary px-6 py-4 text-center font-mono leading-[1] text-primary transition-colors duration-300 hover:bg-primaryTint md:px-7 md:py-5"
         >
           Go back Home
         </Link>

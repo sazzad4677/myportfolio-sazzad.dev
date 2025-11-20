@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Semantic Theme Variables */
+  --primary: #64ffda;
+  --primary-tint: rgba(100, 255, 218, 0.1);
+  --secondary: #8892b0;
+  --background: #0a192f;
+  --surface: #112240;
+  --surface-variant: #233554;
+  --on-background: #ccd6f6;
+  --on-surface: #a8b2d1;
+  --on-surface-variant: #495670;
+  --shadow: rgba(2, 12, 27, 0.7);
+}
+
 @layer base {
   @font-face {
     font-family: "Calibre";
@@ -44,6 +58,7 @@ html {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
 
 body {
   color: #a8b2d1;

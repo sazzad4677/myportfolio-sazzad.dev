@@ -32,7 +32,7 @@ const Socials = () => {
           className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
         >
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 hover:text-primary transition-colors duration-300 ease-transition"
             href="https://facebook.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,7 +58,7 @@ const Socials = () => {
           className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
         >
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 hover:text-primary transition-colors duration-300 ease-transition"
             href="https://github.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const Socials = () => {
           className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
         >
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 hover:text-primary transition-colors duration-300 ease-transition"
             href="https://twitter.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -110,7 +110,7 @@ const Socials = () => {
           className="transform scale-90 hover:scale-100 transition-transform duration-300 ease-transition"
         >
           <a
-            className="inline-block cursor-pointer p-3 hover:text-green transition-colors duration-300 ease-transition"
+            className="inline-block cursor-pointer p-3 hover:text-primary transition-colors duration-300 ease-transition"
             href="https://www.linkedin.com/in/sazzad4673/"
             target="_blank"
             rel="noopener noreferrer"
@@ -140,7 +140,7 @@ const Socials = () => {
           opacity: 1,
           transition: { ease: "easeInOut", duration: 0.5, delay: 0.1 },
         }}
-        className="w-[1px] h-32 bg-lightestSlate"
+        className="w-[1px] h-32 bg-on-background"
       />
     </div>
   );

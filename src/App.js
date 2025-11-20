@@ -8,7 +8,7 @@ const NoMatchRoute = React.lazy(() => import("./pages/NoMatchRoute.js"));
 
 function App() {
   return (
-    <div className="App bg-navy overflow-x-hidden">
+    <div className="App bg-background overflow-x-hidden">
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />

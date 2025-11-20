@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <header
-      className={`absolute z-50 flex h-auto w-full items-center bg-navy px-6 backdrop-blur backdrop-filter md:py-0 md:px-10 ${scrollPosition >= 120
+      className={`absolute z-50 flex h-auto w-full items-center bg-background px-6 backdrop-blur backdrop-filter md:py-0 md:px-10 ${scrollPosition >= 120
         ? "header-active bg-opacity-80 py-4 md:h-16"
         : "py-5 md:h-24"
         }`}
@@ -53,7 +53,7 @@ const Header = () => {
             className="cursor-pointer"
             href="#home"
           >
-            <div className="h-full w-full tracking-wide text-green transition-all duration-300 ease-in-out">
+            <div className="h-full w-full tracking-wide text-primary transition-all duration-300 ease-in-out">
               <svg
                 id="logo"
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ const Header = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.5 }}
-                    className="count relative py-3 font-mono text-sm leading-none text-lightestSlate transition-colors duration-300 hover:text-green md:mx-1 md:py-0 "
+                    className="count relative py-3 font-mono text-sm leading-none text-on-background transition-colors duration-300 hover:text-primary md:mx-1 md:py-0 "
                   >
                     <a
                       className="count-item cursor-pointer p-2.5"
@@ -136,7 +136,7 @@ const Header = () => {
                   href="https://drive.google.com/file/d/1ffycRhonZegQk2VJjfsa_g_AZAOj_5Xw/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3.5 ml-3 inline-block rounded border border-green bg-transparent py-3 px-4 font-mono text-sm leading-none text-green transition-all duration-300 ease-in-out hover:bg-greenTint md:mt-0"
+                  className="mt-3.5 ml-3 inline-block rounded border border-primary bg-transparent py-3 px-4 font-mono text-sm leading-none text-primary transition-all duration-300 ease-in-out hover:bg-primary-tint md:mt-0"
                 >
                   Resume
                 </a>
