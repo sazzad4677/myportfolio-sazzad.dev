@@ -78,7 +78,7 @@ const Works = () => {
                 }`}
             >
               <div
-                className={`relative z-10 col-span-full row-span-full h-full bg-surface px-10 py-6 opacity-90 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:opacity-100 md:shadow-none ${(index + 1) % 2 === 0
+                className={`relative z-10 col-span-full row-span-full h-full bg-background px-10 py-6 opacity-90 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:opacity-100 md:shadow-none ${(index + 1) % 2 === 0
                   ? " md:col-start-1 md:col-end-[7] "
                   : " md:col-start-5 md:col-end-[-1] lg:col-start-7 "
                   }`}
@@ -96,7 +96,7 @@ const Works = () => {
                     {project.title}
                   </a>
                 </h3>
-                <div className="relative z-10 rounded-sm text-base text-on-surface md:bg-surface md:p-5 md:shadow">
+                <div className="relative z-10 rounded-sm text-base text-foreground md:bg-background md:p-5 md:shadow">
                   <p>{project.description}</p>
                 </div>
                 <ul

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* Semantic Theme Variables */
+  /* Default Theme (Dark/Navy) */
   --primary: #64ffda;
   --primary-tint: rgba(100, 255, 218, 0.1);
   --secondary: #8892b0;
@@ -14,6 +14,128 @@
   --on-surface: #a8b2d1;
   --on-surface-variant: #495670;
   --shadow: rgba(2, 12, 27, 0.7);
+
+  /* shadcn/ui Variables Mapped to Theme */
+  --foreground: var(--on-background);
+  --card: var(--surface);
+  --card-foreground: var(--on-surface);
+  --popover: var(--surface);
+  --popover-foreground: var(--on-surface);
+  --primary-foreground: var(--background);
+  --secondary-foreground: var(--background);
+  --muted: var(--surface-variant);
+  --muted-foreground: var(--on-surface-variant);
+  --accent: var(--surface-variant);
+  --accent-foreground: var(--primary);
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: var(--surface-variant);
+  --input: var(--surface-variant);
+  --ring: var(--primary);
+  --radius: 0.5rem;
+}
+
+[data-theme="gold"] {
+  --background: hsl(224 71% 4%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222 47% 11%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222 47% 11%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(48, 93%, 73%);
+  /* Gold */
+  --primary-foreground: hsl(210 40% 98%);
+  --secondary: hsl(210 40% 96.1%);
+  --secondary-foreground: hsl(222 47% 11%);
+  --muted: hsl(217 33% 17%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(217 33% 17%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: hsl(217 33% 17%);
+  --input: hsl(217 33% 17%);
+  --ring: hsl(47.9 95.8% 53.1%);
+  --radius: 0.5rem;
+
+  /* Map to existing semantic vars for compatibility */
+  --primary-tint: rgba(253, 224, 71, 0.1);
+  /* Gold alpha */
+  --surface: hsl(222 47% 11%);
+  --surface-variant: hsl(217 33% 17%);
+  --on-background: hsl(210 40% 98%);
+  --on-surface: hsl(210 40% 98%);
+  --on-surface-variant: hsl(215 20.2% 75%);
+  /* Good contrast for secondary text */
+  --shadow: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="sage"] {
+  --background: hsl(224 71% 4%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222 47% 11%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222 47% 11%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(142, 70%, 70%);
+  /* Soft Green */
+  --primary-foreground: hsl(210 40% 98%);
+  --secondary: hsl(210 40% 96.1%);
+  --secondary-foreground: hsl(222 47% 11%);
+  --muted: hsl(217 33% 17%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(217 33% 17%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: hsl(217 33% 17%);
+  --input: hsl(217 33% 17%);
+  --ring: hsl(142, 70%, 70%);
+  --radius: 0.5rem;
+
+  /* Map to existing semantic vars for compatibility */
+  --primary-tint: rgba(120, 255, 150, 0.1);
+  /* Sage alpha */
+  --surface: hsl(222 47% 11%);
+  --surface-variant: hsl(217 33% 17%);
+  --on-background: hsl(210 40% 98%);
+  --on-surface: hsl(210 40% 98%);
+  --on-surface-variant: hsl(215 20.2% 75%);
+  --shadow: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="sky"] {
+  --background: hsl(224 71% 4%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222 47% 11%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222 47% 11%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(199, 89%, 75%);
+  /* Soft Blue */
+  --primary-foreground: hsl(210 40% 98%);
+  --secondary: hsl(210 40% 96.1%);
+  --secondary-foreground: hsl(222 47% 11%);
+  --muted: hsl(217 33% 17%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(217 33% 17%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: hsl(217 33% 17%);
+  --input: hsl(217 33% 17%);
+  --ring: hsl(199, 89%, 75%);
+  --radius: 0.5rem;
+
+  /* Map to existing semantic vars for compatibility */
+  --primary-tint: rgba(135, 206, 250, 0.1);
+  /* Sky alpha */
+  --surface: hsl(222 47% 11%);
+  --surface-variant: hsl(217 33% 17%);
+  --on-background: hsl(210 40% 98%);
+  --on-surface: hsl(210 40% 98%);
+  --on-surface-variant: hsl(215 20.2% 75%);
+  --shadow: rgba(0, 0, 0, 0.7);
 }
 
 @layer base {

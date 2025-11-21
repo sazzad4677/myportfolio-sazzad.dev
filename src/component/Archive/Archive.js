@@ -75,7 +75,7 @@ const Archive = () => {
         <ul className="relative grid list-none grid-cols-1 gap-3.5 md:grid-cols-2 lg:grid-cols-3 ">
           {archive.map((project, index) => (
             <li key={index} className="relative">
-              <div className="relative flex h-full flex-col items-start justify-between rounded bg-surface px-[2rem] py-[1.75rem]  shadow-[0_10px_30px_-15px] shadow-shadow ">
+              <div className="relative flex h-full flex-col items-start justify-between rounded bg-background px-[2rem] py-[1.75rem]  shadow-[0_10px_30px_-15px] shadow-shadow ">
                 <header>
                   <div className="mb-[35px] flex items-center justify-between ">
                     <div className="h-10 w-10 text-primary">
@@ -98,7 +98,7 @@ const Archive = () => {
                       <a
                         href={project.links.github}
                         aria-label="External Link"
-                        className="mr-2.5 h-5 w-5 text-on-surface hover:text-primary"
+                        className="mr-2.5 h-5 w-5 text-foreground hover:text-primary"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -120,7 +120,7 @@ const Archive = () => {
                       <a
                         href={project.links.liveLink}
                         aria-label="External Link"
-                        className="h-5 w-5 text-on-surface hover:text-primary"
+                        className="h-5 w-5 text-foreground hover:text-primary"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -153,7 +153,7 @@ const Archive = () => {
                       {project.title}
                     </a>
                   </h3>
-                  <div className="text-[17px] leading-6 text-on-surface">
+                  <div className="text-[17px] leading-6 text-foreground">
                     <p>{project.description}</p>
                   </div>
                 </header>

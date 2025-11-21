@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import useScrollPosition from "../../hooks/useScrollPosition";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 // import { Link as ReactScrollLink } from "react-scroll";
 
 const Header = () => {
@@ -131,6 +132,7 @@ const Header = () => {
                     ease: "easeInOut",
                   },
                 }}
+                className="flex items-center"
               >
                 <a
                   href="https://drive.google.com/file/d/1ffycRhonZegQk2VJjfsa_g_AZAOj_5Xw/view?usp=drive_link"
@@ -140,6 +142,9 @@ const Header = () => {
                 >
                   Resume
                 </a>
+                <div className="ml-4 mt-3.5 md:mt-0">
+                  <ThemeSwitcher />
+                </div>
               </motion.div>
             </motion.div>
           )}

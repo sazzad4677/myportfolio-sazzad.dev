@@ -61,7 +61,7 @@ const About = () => {
                   width="500"
                   height="500"
                   className="z-10 mix-blend-multiply grayscale filter transition-all duration-100 ease-transition group-hover:mix-blend-normal group-hover:grayscale-0"
-                  src="/images/me.webp"
+                  src="/images/me.jpg"
                   alt=""
                 />
               </div>
