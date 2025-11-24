@@ -1,10 +1,6 @@
 module.exports = {
-<<<<<<< HEAD
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"], // or 'media' or 'class'
-=======
   darkMode: ["class"],
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"],
->>>>>>> NextJs-Upgrade
   theme: {
     container: {
       center: true,
