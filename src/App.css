@@ -6,27 +6,30 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 .count {
   counter-increment: item 1;
+  transition: all 0.3s linear;
 }
+
 .count-item::before {
   content: "0" counter(item) ".";
   margin-right: 5px;
   font-size: 14px;
   text-align: right;
-  color: rgb(100 255 218);
+  color: var(--primary);
 }
 
 .menu-toggle-btn {
   cursor: pointer;
   width: 30px;
 }
+
 .menu-toggle-btn span {
-  background: rgb(100 255 218);
+  background: var(--primary);
   display: block;
   width: 30px;
   height: 4px;
@@ -35,15 +38,18 @@ html{
   -webkit-transition: all 0.5s linear;
   transition: all 0.3s linear;
 }
+
 .menu-toggle-btn-open span:nth-child(1),
 .menu-toggle-btn-open span:nth-child(3) {
   transform: translate(0px, 13px) rotate(-45deg);
   margin: 0;
 }
+
 .menu-toggle-btn-open span:nth-child(2) {
   height: 0;
   margin: 0;
 }
+
 .menu-toggle-btn-open span:nth-child(3) {
   transform: translate(0px, 9px) rotate(45deg);
 }

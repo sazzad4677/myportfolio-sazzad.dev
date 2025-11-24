@@ -64,11 +64,11 @@ const Works = () => {
       <section className="min-h-[75vh] py-12 md:py-24">
         <div className="mt-5 mb-10 flex items-center space-x-4 ">
           <h2
-            className={`whitespace-nowrap font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-lightestSlate before:mr-2.5 before:font-mono before:text-xl before:text-green before:content-['03.']`}
+            className={`whitespace-nowrap font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-on-background before:mr-2.5 before:font-mono before:text-xl before:text-primary before:content-['03.']`}
           >
             Some things I've build
           </h2>
-          <span className="h-px w-52 bg-boatswain" />
+          <span className="h-px w-52 bg-surface-variant" />
         </div>
         <ul className="space-y-12 md:space-y-28 ">
           {features.map((project, index) => (
@@ -78,15 +78,15 @@ const Works = () => {
                 }`}
             >
               <div
-                className={`relative z-10 col-span-full row-span-full h-full bg-lightNavy px-10 py-6 opacity-90 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:opacity-100 md:shadow-none ${(index + 1) % 2 === 0
+                className={`relative z-10 col-span-full row-span-full h-full bg-background px-10 py-6 opacity-90 shadow-2xl sm:p-10 md:h-auto md:bg-transparent md:p-0 md:opacity-100 md:shadow-none ${(index + 1) % 2 === 0
                   ? " md:col-start-1 md:col-end-[7] "
                   : " md:col-start-5 md:col-end-[-1] lg:col-start-7 "
                   }`}
               >
-                <p className="font-regular my-[10px] font-mono text-sm text-green">
+                <p className="font-regular my-[10px] font-mono text-sm text-primary">
                   Featured Project
                 </p>
-                <h3 className="mb-2 text-[clamp(24px,5vw,28px)] font-semibold leading-[1.1] tracking-[1px] text-lightestSlate transition-colors duration-300 ease-transition hover:text-green">
+                <h3 className="mb-2 text-[clamp(24px,5vw,28px)] font-semibold leading-[1.1] tracking-[1px] text-on-background transition-colors duration-300 ease-transition hover:text-primary">
                   <a
                     className="static"
                     href={project.links.external || project.links.github}
@@ -96,11 +96,11 @@ const Works = () => {
                     {project.title}
                   </a>
                 </h3>
-                <div className="relative z-10 rounded-sm text-base text-lightSlate md:bg-lightNavy md:p-5 md:shadow">
+                <div className="relative z-10 rounded-sm text-base text-foreground md:bg-background md:p-5 md:shadow">
                   <p>{project.description}</p>
                 </div>
                 <ul
-                  className={`mt-2 flex flex-wrap items-center space-x-5 font-mono text-xs text-green ${(index + 1) % 2 === 0
+                  className={`mt-2 flex flex-wrap items-center space-x-5 font-mono text-xs text-primary ${(index + 1) % 2 === 0
                     ? "justify-end md:justify-start"
                     : "justify-end"
                     }`}
@@ -117,7 +117,7 @@ const Works = () => {
                 >
                   {project.links.github && (
                     <a
-                      className="p-3 transition-colors duration-300 ease-transition hover:text-green"
+                      className="p-3 transition-colors duration-300 ease-transition hover:text-primary"
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -140,7 +140,7 @@ const Works = () => {
                   )}
                   {project.links.external && (
                     <a
-                      className="p-3 transition-colors duration-300 ease-transition hover:text-green"
+                      className="p-3 transition-colors duration-300 ease-transition hover:text-primary"
                       href={project.links.external}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -166,7 +166,7 @@ const Works = () => {
                 </div>
               </div>
               <div
-                className={`relative bg-green transition-all duration-200 ease-transition  ${(index + 1) % 2 === 0
+                className={`relative bg-primary transition-all duration-200 ease-transition  ${(index + 1) % 2 === 0
                   ? "col-span-full row-span-full md:col-start-6 md:col-end-[-1] "
                   : "col-span-full row-span-full md:col-start-1 md:col-end-8 "
                   }

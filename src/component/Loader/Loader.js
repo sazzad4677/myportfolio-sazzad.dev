@@ -45,9 +45,9 @@ const Loader = ({ setLoading }) => {
     <AnimatePresence>
       <motion.div
         key="loader"
-        className="fixed inset-0 z-[99] flex h-screen w-full items-center justify-center bg-navy"
+        className="fixed inset-0 z-[99] flex h-screen w-full items-center justify-center bg-background"
       >
-        <div className="h-32 w-32 text-green">
+        <div className="h-32 w-32 text-primary">
           <motion.svg
             variants={svgVariants}
             initial="hidden"

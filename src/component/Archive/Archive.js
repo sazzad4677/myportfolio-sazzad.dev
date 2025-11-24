@@ -68,17 +68,17 @@ const Archive = () => {
     <Element name="archive">
       <section className="min-h-[75vh] py-12 md:py-24">
         <div className="mt-5 mb-10">
-          <h2 className="whitespace-nowrap text-center font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-lightestSlate">
+          <h2 className="whitespace-nowrap text-center font-sans text-[clamp(26px,5vw,32px)] font-bold capitalize text-on-background">
             Other Noteworthy Projects
           </h2>
         </div>
         <ul className="relative grid list-none grid-cols-1 gap-3.5 md:grid-cols-2 lg:grid-cols-3 ">
           {archive.map((project, index) => (
             <li key={index} className="relative">
-              <div className="relative flex h-full flex-col items-start justify-between rounded bg-lightNavy px-[2rem] py-[1.75rem]  shadow-[0_10px_30px_-15px] shadow-navyShadow ">
+              <div className="relative flex h-full flex-col items-start justify-between rounded bg-background px-[2rem] py-[1.75rem]  shadow-[0_10px_30px_-15px] shadow-shadow ">
                 <header>
                   <div className="mb-[35px] flex items-center justify-between ">
-                    <div className="h-10 w-10 text-green">
+                    <div className="h-10 w-10 text-primary">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         role="img"
@@ -98,7 +98,7 @@ const Archive = () => {
                       <a
                         href={project.links.github}
                         aria-label="External Link"
-                        className="mr-2.5 h-5 w-5 text-lightSlate hover:text-green"
+                        className="mr-2.5 h-5 w-5 text-foreground hover:text-primary"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -120,7 +120,7 @@ const Archive = () => {
                       <a
                         href={project.links.liveLink}
                         aria-label="External Link"
-                        className="h-5 w-5 text-lightSlate hover:text-green"
+                        className="h-5 w-5 text-foreground hover:text-primary"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -143,7 +143,7 @@ const Archive = () => {
                       </a>
                     </div>
                   </div>
-                  <h3 className="mb-3 font-sans text-[22px] font-semibold leading-6 tracking-wide text-lightestSlate hover:text-green">
+                  <h3 className="mb-3 font-sans text-[22px] font-semibold leading-6 tracking-wide text-on-background hover:text-primary">
                     <a
                       href={project.links.liveLink}
                       target="_blank"
@@ -153,7 +153,7 @@ const Archive = () => {
                       {project.title}
                     </a>
                   </h3>
-                  <div className="text-[17px] leading-6 text-lightSlate">
+                  <div className="text-[17px] leading-6 text-foreground">
                     <p>{project.description}</p>
                   </div>
                 </header>

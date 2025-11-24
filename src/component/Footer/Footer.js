@@ -6,7 +6,7 @@ const Footer = () => {
       <ul className="flex items-center justify-center space-y-1 md:hidden">
         {/* <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-primary"
             href="https://facebook.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,7 +29,7 @@ const Footer = () => {
         </li> */}
         <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-primary"
             href="https://github.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -52,7 +52,7 @@ const Footer = () => {
         </li>
         <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-primary"
             href="https://twitter.com/sazzad4677/"
             target="_blank"
             rel="noopener noreferrer"
@@ -75,7 +75,7 @@ const Footer = () => {
         </li>
         <li className="scale-90 transform transition-transform duration-300 ease-transition hover:scale-100">
           <a
-            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-green"
+            className="inline-block cursor-pointer p-3 transition-colors duration-300 ease-transition hover:text-primary"
             href="https://www.linkedin.com/in/sazzad4673/"
             target="_blank"
             rel="noopener noreferrer"
@@ -101,11 +101,11 @@ const Footer = () => {
       </ul>
       <p className="text-base font-light tracking-[1px]">
         Designed by{" "}
-        <a href="https://github.com/bchiang7" className="text-green">
+        <a href="https://github.com/bchiang7" className="text-primary">
           Brittany
         </a>{" "}
         & Developed by{" "}
-        <a href="https://github.com/sazzad4677" className="text-green">
+        <a href="https://github.com/sazzad4677" className="text-primary">
           Sazzad
         </a>
       </p>
