@@ -2,6 +2,7 @@ import '../src/index.css';
 import '../src/App.css';
 import { ThemeProvider } from "@/components/theme-provider"
 import JsonLd from './json-ld'
+import ClientSeo from "@/components/ClientSeo";
 
 export const metadata = {
     title: {
@@ -57,7 +58,6 @@ export const metadata = {
         card: 'summary_large_image',
         title: 'Sazzad - Frontend Developer & Software Engineer',
         description: 'Passionate Frontend Developer and Software Engineer specializing in React, Next.js, and modern web technologies. Building exceptional digital experiences.',
-        creator: '@Sazzad',
         images: ['/banner.png'],
     },
     robots: {
@@ -101,6 +101,7 @@ export default function RootLayout({ children }) {
                     enableSystem
                     disableTransitionOnChange
                 >
+                    <ClientSeo />
                     {children}
                 </ThemeProvider>
             </body>

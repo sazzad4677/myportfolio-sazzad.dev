@@ -1,57 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Element } from "react-scroll/modules";
+import contentManager from "@/lib/contentManager";
 
 const Experience = () => {
   const [tabIndex, setTabIndex] = React.useState(0);
+  const [jobs, setJobs] = useState([]);
 
-  const jobs = [
-    {
-      company: "MMHI",
-      name: "MyMedical Hub International",
-      position: "Software Enginner",
-      range: "March 2024 - Present",
-      website: "https://mymedicalhub.com/",
-      description: [
-        {
-          item: "Developed and maintained responsive, user-friendly web interfaces for the company’s healthcare platform, improving patient and provider engagement.",
-        },
-        {
-          item: "Collaborated with UX/UI designers to implement modern, accessible designs using HTML, CSS, and JavaScript frameworks.",
-        },
-        {
-          item: "Optimized web applications for performance, ensuring fast load times and seamless functionality across multiple devices and browsers.",
-        },
-        {
-          item: "Integrated frontend components with backend APIs to enable dynamic data display and interactive features.",
-        },
-        {
-          item: "Participated in code reviews and worked closely with the development team to maintain high code quality and adhere to best practices.",
-        },
-        {
-          item: "Troubleshot and resolved frontend bugs and issues promptly, contributing to enhanced user satisfaction.",
-        },
-        {
-          item: "Stayed updated with the latest frontend technologies to continuously improve the application’s interface and user experience.",
-        }
-      ],
-    },
-    {
-      company: "Buyonia Bangladesh Limited",
-      name: "Buyonia",
-      position: "Software Engineer",
-      range: "April 2022 - March 2024",
-      website: "https://www.buyoniasoft.com/",
-      description: [
-        {
-          item: "I have extensive experience working with a diverse range of platforms, frameworks, and content management systems. These include JavaScript, TypeScript, React, Next.js, Express, and MongoDB. I am adept at leveraging these technologies to deliver high-quality solutions and optimize business operations.",
-        },
-        {
-          item: "Demonstrated success in managing server infrastructure with AWS, leading and motivating teams, and fostering strong relationships with colleagues.",
-        },
-      ],
-    },
-  ];
-  const job = jobs[tabIndex];
+  useEffect(() => {
+    const jobsData = contentManager.getExperience();
+    setJobs(jobsData);
+  }, []);
+
+  const job = jobs[tabIndex] || {};
   return (
     <Element name="jobs">
       <section
@@ -116,12 +76,12 @@ const Experience = () => {
             <p className="prose text-secondary">{job.range}</p>
             {job?.description && (
               <ul className="ml-3 mt-5 list-outside tracking-[1px] list-[square]">
-                {job?.description.map((list, index) => (
+                {job?.description.map((item, index) => (
                   <li
                     className="py-2 pl-3 text-on-surface font-light"
                     key={index}
                   >
-                    <span>{list.item}</span>
+                    <span>{typeof item === 'string' ? item : item.item}</span>
                   </li>
                 ))}
               </ul>

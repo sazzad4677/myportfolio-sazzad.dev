@@ -1,64 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Element } from "react-scroll/modules";
+import contentManager from "@/lib/contentManager";
+
 const Works = () => {
-  const features = [
-    {
-      title: "Stationary Shop",
-      description:
-        "Built a modern, responsive frontend for an online stationary shop using React, TypeScript, Vite, Tailwind CSS, ESLint, Node Js, Express Js, Mongoose and ShadCN UI. Features include dynamic product filtering, a functional shopping cart, and mobile-friendly design. Ensured code quality with ESLint and a type-safe architecture.",
-      technologies: [
-        "React",
-        "TypeScript",
-        "ExpressJs",
-        "Mongoose",
-        "Redux"
-      ],
-      links: {
-        github: "https://github.com/sazzad4677/Stationary-Shop-Frontend",
-        external: "https://stationary-shop-frontend-silk.vercel.app/",
-      },
-      image: { url: "Pappier.png" },
-    },
-    {
-      title: "Cutly - Link Shortener",
-      description:
-        "A web application for shortening long URLs. Here I used a url validator. I didn't use any third-party APIs. Instead, I built my own API with my proper error handling.",
-      technologies: ["React", "Express JS", "Tailwind CSS", "Mongoose"],
-      links: {
-        github: "https://github.com/sazzad4677/cutly-frontend",
-        external: "https://cutly.netlify.app/",
-      },
-      image: { url: "cutly.webp" },
-    },
-    {
-      title: "Interactive Comments Section",
-      description:
-        "Users can read, add, edit, and delete comments in this project. Comments can be voted up or down by the user. The most popular comments will be displayed first. After the comment, the user can observe how much time has passed.",
-      technologies: ["React", "Tailwind CSS"],
-      links: {
-        github: "https://github.com/sazzad4677/Interactive-comments-section",
-        external: "https://interactive-comments-bd.netlify.app/",
-      },
-      image: { url: "comment.webp" },
-    },
-    {
-      title: "GO Mart",
-      description:
-        "A grocery delivery system controlled by voice. where the user may utilize voice commands to purchase items. A person with the authority to add, remove, and update products. Voice commands may be used to add items to the cart. Sorting and pagination of the products.",
-      technologies: [
-        "Mongoose",
-        "Express.js",
-        "React JS",
-        "Tailwind CSS",
-        "Redux",
-      ],
-      links: {
-        github: "https://github.com/sazzad4677/GoMart-Frontend",
-        external: "https://go-mart.netlify.app/",
-      },
-      image: { url: "gomart.webp" },
-    },
-  ];
+  const [features, setFeatures] = useState([]);
+
+  useEffect(() => {
+    const projectsData = contentManager.getProjects();
+    setFeatures(projectsData);
+  }, []);
+
   return (
     <Element name="projects">
       <section className="min-h-[75vh] py-12 md:py-24">
@@ -73,7 +24,7 @@ const Works = () => {
         <ul className="space-y-12 md:space-y-28 ">
           {features.map((project, index) => (
             <li
-              key={index}
+              key={project.id || index}
               className={`grid grid-cols-12 items-center gap-3 group ${(index + 1) % 2 === 0 ? "text-left" : "md:text-right"
                 }`}
             >
