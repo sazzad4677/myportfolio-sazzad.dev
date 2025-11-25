@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npx @infisical/cli run --env=staging -- npm run build"
   publish = ".next"
 
 [build.environment]
