@@ -25,13 +25,16 @@ export default function MediaManager() {
     const fileInputRef = useRef(null);
 
     useEffect(() => {
-        loadMedia();
-    }, []);
+        // Initial load
+        setMedia(contentManager.getMedia());
 
-    const loadMedia = () => {
-        const mediaData = contentManager.getMedia();
-        setMedia(mediaData);
-    };
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setMedia(content.media || []);
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     const showMessage = (type, text) => {
         setMessage({ type, text });
@@ -47,7 +50,6 @@ export default function MediaManager() {
             });
             setUrlInput('');
             setNameInput('');
-            loadMedia();
             setActiveTab('gallery');
             showMessage('success', 'Image URL added successfully!');
         }
@@ -70,7 +72,6 @@ export default function MediaManager() {
                     name: file.name,
                     type: 'base64'
                 });
-                loadMedia();
                 setActiveTab('gallery');
                 showMessage('success', 'Image uploaded successfully!');
             };
@@ -81,7 +82,6 @@ export default function MediaManager() {
     const handleDelete = (id) => {
         if (confirm('Are you sure you want to delete this image?')) {
             contentManager.deleteMedia(id);
-            loadMedia();
             showMessage('success', 'Image deleted successfully');
         }
     };
@@ -130,8 +130,8 @@ export default function MediaManager() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0 }}
                         className={`flex items-center gap-2 rounded-full px-4 py-1 text-sm font-medium ${message.type === 'success'
-                                ? 'bg-green-500/10 text-green-500'
-                                : 'bg-red-500/10 text-red-500'
+                            ? 'bg-green-500/10 text-green-500'
+                            : 'bg-red-500/10 text-red-500'
                             }`}
                     >
                         {message.type === 'success' ? <Check size={16} /> : <X size={16} />}
@@ -145,8 +145,8 @@ export default function MediaManager() {
                 <button
                     onClick={() => setActiveTab('gallery')}
                     className={`relative pb-3 text-sm font-medium transition-colors ${activeTab === 'gallery'
-                            ? 'text-primary'
-                            : 'text-secondary hover:text-on-background'
+                        ? 'text-primary'
+                        : 'text-secondary hover:text-on-background'
                         }`}
                 >
                     Gallery ({media.length})
@@ -160,8 +160,8 @@ export default function MediaManager() {
                 <button
                     onClick={() => setActiveTab('add')}
                     className={`relative pb-3 text-sm font-medium transition-colors ${activeTab === 'add'
-                            ? 'text-primary'
-                            : 'text-secondary hover:text-on-background'
+                        ? 'text-primary'
+                        : 'text-secondary hover:text-on-background'
                         }`}
                 >
                     Add New
@@ -303,8 +303,8 @@ export default function MediaManager() {
 
                             <div
                                 className={`relative flex h-64 cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed transition-all ${dragActive
-                                        ? 'border-primary bg-primary/5'
-                                        : 'border-surface-variant bg-background/30 hover:border-primary/50 hover:bg-surface-variant/30'
+                                    ? 'border-primary bg-primary/5'
+                                    : 'border-surface-variant bg-background/30 hover:border-primary/50 hover:bg-surface-variant/30'
                                     }`}
                                 onDragEnter={handleDrag}
                                 onDragLeave={handleDrag}

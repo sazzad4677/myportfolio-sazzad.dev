@@ -16,8 +16,22 @@ export default function HeroEditor() {
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
-        const heroData = contentManager.getHero();
-        setFormData(heroData);
+        // Initial load
+        setFormData(contentManager.getHero());
+
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setFormData(content.hero || {
+                greeting: '',
+                name: '',
+                tagline: '',
+                description: '',
+                ctaText: '',
+                ctaLink: ''
+            });
+        });
+
+        return () => unsubscribe();
     }, []);
 
     const handleChange = (e) => {

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { LogOut, LayoutDashboard, User, Code2, Briefcase, FileText, Mail, Image, Settings, Globe } from 'lucide-react';
+import { LogOut, LayoutDashboard, User, Code2, Briefcase, FileText, Mail, Image, Settings, Globe, Palette } from 'lucide-react';
 import HeroEditor from '@/components/admin/HeroEditor';
 import AboutEditor from '@/components/admin/AboutEditor';
 import SkillsManager from '@/components/admin/SkillsManager';
@@ -13,6 +13,7 @@ import DashboardOverview from '@/components/admin/DashboardOverview';
 import SettingsManager from '@/components/admin/SettingsManager';
 import MediaManager from '@/components/admin/MediaManager';
 import SeoManager from '@/components/admin/SeoManager';
+import ThemeManager from '@/components/admin/ThemeManager';
 import Login from '@/components/admin/Login';
 
 export default function AdminDashboard() {
@@ -41,7 +42,7 @@ export default function AdminDashboard() {
 
     const tabs = [
         { id: 'dashboard', label: 'Dashboard', icon: <LayoutDashboard size={18} /> },
-        { id: 'hero', label: 'Hero Section', icon: <LayoutDashboard size={18} /> }, // Using LayoutDashboard as placeholder if needed, or specific icon
+        { id: 'hero', label: 'Hero Section', icon: <LayoutDashboard size={18} /> },
         { id: 'about', label: 'About', icon: <User size={18} /> },
         { id: 'skills', label: 'Skills', icon: <Code2 size={18} /> },
         { id: 'projects', label: 'Projects', icon: <Briefcase size={18} /> },
@@ -49,6 +50,7 @@ export default function AdminDashboard() {
         { id: 'media', label: 'Media Library', icon: <Image size={18} /> },
         { id: 'seo', label: 'SEO', icon: <Globe size={18} /> },
         { id: 'contact', label: 'Contact', icon: <Mail size={18} /> },
+        { id: 'theme', label: 'Theme', icon: <Palette size={18} /> },
         { id: 'settings', label: 'Settings', icon: <Settings size={18} /> }
     ];
 
@@ -63,6 +65,7 @@ export default function AdminDashboard() {
             case 'media': return <MediaManager />;
             case 'seo': return <SeoManager />;
             case 'contact': return <ContactEditor />;
+            case 'theme': return <ThemeManager />;
             case 'settings': return <SettingsManager />;
             default: return <DashboardOverview onNavigate={setActiveTab} />;
         }

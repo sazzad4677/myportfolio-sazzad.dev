@@ -11,13 +11,16 @@ export default function ProjectsManager() {
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
-        loadProjects();
-    }, []);
+        // Initial load
+        setProjects(contentManager.getProjects());
 
-    const loadProjects = () => {
-        const projectsData = contentManager.getProjects();
-        setProjects(projectsData);
-    };
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setProjects(content.projects || []);
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     const handleNewProject = () => {
         setCurrentProject({
@@ -39,7 +42,6 @@ export default function ProjectsManager() {
     const handleDeleteProject = (projectId) => {
         if (confirm('Are you sure you want to delete this project?')) {
             contentManager.deleteProject(projectId);
-            loadProjects();
             showSaved();
         }
     };
@@ -52,7 +54,6 @@ export default function ProjectsManager() {
         }
         setIsEditing(false);
         setCurrentProject(null);
-        loadProjects();
         showSaved();
     };
 

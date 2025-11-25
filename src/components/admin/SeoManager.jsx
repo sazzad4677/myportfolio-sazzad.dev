@@ -16,8 +16,21 @@ export default function SeoManager() {
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
-        const data = contentManager.getSeo();
-        setSeoData(data);
+        // Initial load
+        setSeoData(contentManager.getSeo());
+
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setSeoData(content.seo || {
+                title: '',
+                description: '',
+                keywords: '',
+                author: '',
+                linkedin: ''
+            });
+        });
+
+        return () => unsubscribe();
     }, []);
 
     const handleChange = (e) => {

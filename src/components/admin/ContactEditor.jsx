@@ -15,8 +15,21 @@ export default function ContactEditor() {
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
-        const contactData = contentManager.getContact();
-        setFormData(contactData);
+        // Initial load
+        setFormData(contentManager.getContact());
+
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setFormData(content.contact || {
+                preHeading: '',
+                heading: '',
+                description: '',
+                email: '',
+                ctaText: ''
+            });
+        });
+
+        return () => unsubscribe();
     }, []);
 
     const handleChange = (e) => {

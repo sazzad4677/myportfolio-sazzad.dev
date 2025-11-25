@@ -3,6 +3,7 @@ import '../src/App.css';
 import { ThemeProvider } from "@/components/theme-provider"
 import JsonLd from './json-ld'
 import ClientSeo from "@/components/ClientSeo";
+import ThemeSynchronizer from "@/components/ThemeSynchronizer";
 
 export const metadata = {
     title: {
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
                     enableSystem
                     disableTransitionOnChange
                 >
+                    <ThemeSynchronizer />
                     <ClientSeo />
                     {children}
                 </ThemeProvider>

@@ -13,19 +13,22 @@ export default function DashboardOverview({ onNavigate }) {
     });
 
     useEffect(() => {
-        const loadStats = () => {
-            const projects = contentManager.getProjects();
-            const skills = contentManager.getSkills();
-            const experience = contentManager.getExperience();
-
+        const updateStats = (content) => {
             setStats({
-                projects: projects.length,
-                skills: skills.length,
-                experience: experience.length,
+                projects: (content.projects || []).length,
+                skills: (content.skills || []).length,
+                experience: (content.experience || []).length,
                 lastUpdated: new Date().toLocaleDateString()
             });
         };
-        loadStats();
+
+        // Initial load
+        updateStats(contentManager.getAllContent());
+
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe(updateStats);
+
+        return () => unsubscribe();
     }, []);
 
     const cards = [

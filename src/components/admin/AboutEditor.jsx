@@ -13,8 +13,19 @@ export default function AboutEditor() {
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
-        const aboutData = contentManager.getAbout();
-        setFormData(aboutData);
+        // Initial load
+        setFormData(contentManager.getAbout());
+
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setFormData(content.about || {
+                paragraphs: ['', '', ''],
+                skillsHeading: '',
+                profileImage: ''
+            });
+        });
+
+        return () => unsubscribe();
     }, []);
 
     const handleParagraphChange = (index, value) => {

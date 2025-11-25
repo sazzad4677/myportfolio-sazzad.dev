@@ -11,13 +11,16 @@ export default function ExperienceManager() {
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
-        loadJobs();
-    }, []);
+        // Initial load
+        setJobs(contentManager.getExperience());
 
-    const loadJobs = () => {
-        const jobsData = contentManager.getExperience();
-        setJobs(jobsData);
-    };
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setJobs(content.experience || []);
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     const handleNewJob = () => {
         setCurrentJob({
@@ -39,7 +42,6 @@ export default function ExperienceManager() {
     const handleDeleteJob = (jobId) => {
         if (confirm('Are you sure you want to delete this job?')) {
             contentManager.deleteJob(jobId);
-            loadJobs();
             showSaved();
         }
     };
@@ -52,7 +54,6 @@ export default function ExperienceManager() {
         }
         setIsEditing(false);
         setCurrentJob(null);
-        loadJobs();
         showSaved();
     };
 

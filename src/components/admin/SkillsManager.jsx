@@ -12,19 +12,21 @@ export default function SkillsManager() {
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
-        loadSkills();
-    }, []);
+        // Initial load
+        setSkills(contentManager.getSkills());
 
-    const loadSkills = () => {
-        const skillsData = contentManager.getSkills();
-        setSkills(skillsData);
-    };
+        // Subscribe to changes
+        const unsubscribe = contentManager.subscribe((content) => {
+            setSkills(content.skills || []);
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     const handleAddSkill = () => {
         if (newSkill.trim()) {
             contentManager.addSkill(newSkill.trim());
             setNewSkill('');
-            loadSkills();
             showSaved();
         }
     };
@@ -34,7 +36,6 @@ export default function SkillsManager() {
             contentManager.updateSkill(skillId, editingValue.trim());
             setEditingId(null);
             setEditingValue('');
-            loadSkills();
             showSaved();
         }
     };
@@ -42,7 +43,6 @@ export default function SkillsManager() {
     const handleDeleteSkill = (skillId) => {
         if (confirm('Are you sure you want to delete this skill?')) {
             contentManager.deleteSkill(skillId);
-            loadSkills();
             showSaved();
         }
     };
@@ -69,7 +69,6 @@ export default function SkillsManager() {
         if (newIndex >= 0 && newIndex < skills.length) {
             [newSkills[index], newSkills[newIndex]] = [newSkills[newIndex], newSkills[index]];
             contentManager.reorderSkills(newSkills);
-            loadSkills();
             showSaved();
         }
     };
