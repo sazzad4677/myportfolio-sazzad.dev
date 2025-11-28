@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Header from "../component/Header/Header";
-import Email from "../component/Socials/Email";
-import Socials from "../component/Socials/Socials";
+import Header from "../components/Header/Header";
+import Email from "../components/Socials/Email";
+import Socials from "../components/Socials/Socials";
 
 const NoMatchRoute = () => {
   return (
