@@ -47,7 +47,7 @@ export default function ProjectsManager() {
     };
 
     const handleSaveProject = () => {
-        if (currentProject.id) {
+        if (currentProject.id !== undefined && currentProject.id !== null) {
             contentManager.updateProject(currentProject.id, currentProject);
         } else {
             contentManager.addProject(currentProject);
@@ -265,7 +265,7 @@ function ProjectForm({ project, onSave, onCancel, updateField, updateNestedField
             <div className="mb-8 flex items-center justify-between">
                 <div>
                     <h2 className="text-2xl font-bold text-on-background">
-                        {project.id ? 'Edit Project' : 'New Project'}
+                        {project.id !== undefined && project.id !== null ? 'Edit Project' : 'New Project'}
                     </h2>
                     <p className="text-sm text-secondary">Fill in the project details below</p>
                 </div>
