@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Loader2, Bot, User } from 'lucide-react';
+import { MessageCircle, X, Send, Loader2, Bot, User, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -143,9 +143,19 @@ export default function ChatWidget() {
             <Button
                 onClick={() => setIsOpen(!isOpen)}
                 size="icon"
-                className="h-12 w-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                className="h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary text-primary-foreground hover:scale-110"
             >
-                {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+                {isOpen ? (
+                    <X className="w-6 h-6" />
+                ) : (
+                    <div className="relative">
+                        <Sparkles className="w-6 h-6 animate-pulse" />
+                        <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                        </span>
+                    </div>
+                )}
             </Button>
         </div>
     );
