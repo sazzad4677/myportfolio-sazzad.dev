@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import JsonLd from './json-ld'
 import ClientSeo from "@/components/ClientSeo";
 import ThemeSynchronizer from "@/components/ThemeSynchronizer";
+import ChatWidget from "@/components/Chat/ChatWidget";
 
 export const metadata = {
     title: {
@@ -105,6 +106,7 @@ export default function RootLayout({ children }) {
                     <ThemeSynchronizer />
                     <ClientSeo />
                     {children}
+                    <ChatWidget />
                 </ThemeProvider>
             </body>
         </html>

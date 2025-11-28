@@ -22,9 +22,9 @@ const PREDEFINED_THEMES = [
         name: 'Gold',
         colors: {
             primary: '#fde047',
-            background: '#0c0a09',
-            foreground: '#fafaf9',
-            secondary: '#a8a29e'
+            background: '#0a192f',
+            foreground: '#ccd6f6',
+            secondary: '#8892b0'
         }
     },
     {
@@ -32,9 +32,9 @@ const PREDEFINED_THEMES = [
         name: 'Sage',
         colors: {
             primary: '#86efac',
-            background: '#0c0a09',
-            foreground: '#fafaf9',
-            secondary: '#a8a29e'
+            background: '#0a192f',
+            foreground: '#ccd6f6',
+            secondary: '#8892b0'
         }
     },
     {
@@ -42,9 +42,9 @@ const PREDEFINED_THEMES = [
         name: 'Sky',
         colors: {
             primary: '#7dd3fc',
-            background: '#0c0a09',
-            foreground: '#fafaf9',
-            secondary: '#a8a29e'
+            background: '#0a192f',
+            foreground: '#ccd6f6',
+            secondary: '#8892b0'
         }
     }
 ];
