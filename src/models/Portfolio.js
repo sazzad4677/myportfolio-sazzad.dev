@@ -26,6 +26,7 @@ const PortfolioSchema = new mongoose.Schema({
         links: {
             github: String,
             external: String,
+            admin: String,
         },
         image: {
             url: String,

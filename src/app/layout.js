@@ -1,5 +1,5 @@
-import '../src/index.css';
-import '../src/App.css';
+import '../index.css';
+import '../App.css';
 import { ThemeProvider } from "@/components/theme-provider"
 import JsonLd from './json-ld'
 import ClientSeo from "@/components/ClientSeo";

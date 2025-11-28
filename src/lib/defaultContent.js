@@ -35,6 +35,19 @@ export const defaultContent = {
 
     projects: [
         {
+            id: 0,
+            title: "My Portfolio",
+            description: "A personal portfolio website showcasing my projects and skills. Converted from a React project to a Next.js project for better performance and SEO. Features a dynamic admin panel for content management.",
+            technologies: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
+            links: {
+                github: "https://github.com/sazzad4677/myportfolio",
+                external: "https://test.sazzad.dev",
+                admin: "https://test.sazzad.dev/admin"
+            },
+            image: { url: "portfolio.png" },
+            featured: true
+        },
+        {
             id: 1,
             title: "Stationary Shop",
             description: "Built a modern, responsive frontend for an online stationary shop using React, TypeScript, Vite, Tailwind CSS, ESLint, Node Js, Express Js, Mongoose and ShadCN UI. Features include dynamic product filtering, a functional shopping cart, and mobile-friendly design. Ensured code quality with ESLint and a type-safe architecture.",

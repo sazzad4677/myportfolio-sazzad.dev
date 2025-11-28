@@ -9,15 +9,13 @@ export async function GET() {
         let portfolio = await Portfolio.findOne().sort({ createdAt: -1 });
 
         if (!portfolio) {
-            // If no data exists, return default content but don't save it yet
-            // or save it as initial seed data
             return NextResponse.json(defaultContent);
         }
 
         return NextResponse.json(portfolio);
     } catch (error) {
         console.error('Error fetching portfolio:', error);
-        return NextResponse.json({ error: 'Failed to fetch portfolio data' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to fetch portfolio data', details: error.message }, { status: 500 });
     }
 }
 
@@ -40,6 +38,6 @@ export async function POST(request) {
         return NextResponse.json(portfolio);
     } catch (error) {
         console.error('Error saving portfolio:', error);
-        return NextResponse.json({ error: 'Failed to save portfolio data' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to save portfolio data', details: error.message }, { status: 500 });
     }
 }

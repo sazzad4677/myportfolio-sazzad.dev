@@ -172,7 +172,7 @@ class ContentManager {
             title: projectData.title || '',
             description: projectData.description || '',
             technologies: projectData.technologies || [],
-            links: projectData.links || { github: '', external: '' },
+            links: projectData.links || { github: '', external: '', admin: '' },
             image: projectData.image || { url: '' },
             featured: projectData.featured || false
         };

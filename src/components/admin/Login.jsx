@@ -5,25 +5,36 @@ import { motion } from 'framer-motion';
 import { Lock, ArrowRight, AlertCircle, User } from 'lucide-react';
 
 export default function Login({ onLogin }) {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('admin');
+    const [password, setPassword] = useState('admin123');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         setIsLoading(true);
+        console.log(username, password);
 
-        // Simulate network delay for better UX
-        setTimeout(() => {
-            if (username === 'admin' && password === 'admin123') {
+        try {
+            const response = await fetch('/api/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
                 onLogin();
             } else {
-                setError('Invalid credentials. Please try again.');
-                setIsLoading(false);
+                setError(data.error || 'Login failed');
             }
-        }, 800);
+        } catch (err) {
+            setError('An error occurred. Please try again.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
