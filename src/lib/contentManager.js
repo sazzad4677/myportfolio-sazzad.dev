@@ -385,6 +385,46 @@ class ContentManager {
         content.theme.customThemes = content.theme.customThemes.filter(t => t.id !== themeId);
         return this.saveAllContent(content);
     }
+
+    // Data Management
+    async exportContent() {
+        try {
+            // Fetch latest from server to ensure we have the exact data
+            const response = await fetch(`/api/portfolio?t=${Date.now()}`, { cache: 'no-store' });
+            if (response.ok) {
+                const data = await response.json();
+                return JSON.stringify(data, null, 2);
+            } else {
+                console.warn('Failed to fetch latest content for export, using local state');
+                return JSON.stringify(this.getAllContent(), null, 2);
+            }
+        } catch (error) {
+            console.error('Error exporting content:', error);
+            return JSON.stringify(this.getAllContent(), null, 2);
+        }
+    }
+
+    async importContent(jsonString) {
+        try {
+            const data = JSON.parse(jsonString);
+            // Basic validation could go here
+            await this.saveAllContent(data);
+            return true;
+        } catch (error) {
+            console.error('Error importing content:', error);
+            return false;
+        }
+    }
+
+    async resetToDefaults() {
+        try {
+            await this.saveAllContent(defaultContent);
+            return true;
+        } catch (error) {
+            console.error('Error resetting content:', error);
+            return false;
+        }
+    }
 }
 
 // Create and export a singleton instance

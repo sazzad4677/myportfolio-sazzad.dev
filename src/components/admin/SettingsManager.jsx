@@ -26,8 +26,8 @@ export default function SettingsManager() {
         setTimeout(() => setMessage({ type: '', text: '' }), 5000);
     };
 
-    const handleExport = () => {
-        const data = contentManager.exportContent();
+    const handleExport = async () => {
+        const data = await contentManager.exportContent();
         setExportData(data);
         showMessage('success', 'Content exported successfully!');
     };
@@ -39,8 +39,8 @@ export default function SettingsManager() {
         setTimeout(() => setCopied(false), 2000);
     };
 
-    const handleDownload = () => {
-        const data = contentManager.exportContent();
+    const handleDownload = async () => {
+        const data = await contentManager.exportContent();
         const blob = new Blob([data], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -53,11 +53,11 @@ export default function SettingsManager() {
         showMessage('success', 'Content downloaded successfully!');
     };
 
-    const handleImport = () => {
+    const handleImport = async () => {
         try {
             if (!importData.trim()) return;
 
-            const result = contentManager.importContent(importData);
+            const result = await contentManager.importContent(importData);
             if (result) {
                 showMessage('success', 'Content imported successfully! Refreshing...');
                 setImportData('');
@@ -70,9 +70,9 @@ export default function SettingsManager() {
         }
     };
 
-    const handleReset = () => {
+    const handleReset = async () => {
         if (confirm('Are you sure you want to reset all content to defaults? This cannot be undone!')) {
-            contentManager.resetToDefaults();
+            await contentManager.resetToDefaults();
             showMessage('success', 'Content reset to defaults. Refreshing...');
             setTimeout(() => window.location.reload(), 1500);
         }
@@ -95,8 +95,8 @@ export default function SettingsManager() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0 }}
                         className={`flex items-center gap-2 rounded-full px-4 py-1 text-sm font-medium ${message.type === 'success'
-                                ? 'bg-green-500/10 text-green-500'
-                                : 'bg-red-500/10 text-red-500'
+                            ? 'bg-green-500/10 text-green-500'
+                            : 'bg-red-500/10 text-red-500'
                             }`}
                     >
                         {message.type === 'success' ? <Check size={16} /> : <AlertTriangle size={16} />}
@@ -111,8 +111,8 @@ export default function SettingsManager() {
                     <button
                         onClick={() => setActiveSection('data')}
                         className={`flex w-full items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium transition-all ${activeSection === 'data'
-                                ? 'bg-primary text-background shadow-lg shadow-primary/20'
-                                : 'text-secondary hover:bg-surface-variant hover:text-on-background'
+                            ? 'bg-primary text-background shadow-lg shadow-primary/20'
+                            : 'text-secondary hover:bg-surface-variant hover:text-on-background'
                             }`}
                     >
                         <FileJson size={18} />
