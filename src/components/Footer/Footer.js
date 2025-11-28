@@ -99,16 +99,6 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p className="text-base font-light tracking-[1px]">
-        Designed by{" "}
-        <a href="https://github.com/bchiang7" className="text-primary">
-          Brittany
-        </a>{" "}
-        & Developed by{" "}
-        <a href="https://github.com/sazzad4677" className="text-primary">
-          Sazzad
-        </a>
-      </p>
     </footer>
   );
 };
