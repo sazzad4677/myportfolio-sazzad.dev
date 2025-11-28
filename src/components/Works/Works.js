@@ -1,64 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Element } from "react-scroll/modules";
+import contentManager from "@/lib/contentManager";
+
 const Works = () => {
-  const features = [
-    {
-      title: "Stationary Shop",
-      description:
-        "Built a modern, responsive frontend for an online stationary shop using React, TypeScript, Vite, Tailwind CSS, ESLint, Node Js, Express Js, Mongoose and ShadCN UI. Features include dynamic product filtering, a functional shopping cart, and mobile-friendly design. Ensured code quality with ESLint and a type-safe architecture.",
-      technologies: [
-        "React",
-        "TypeScript",
-        "ExpressJs",
-        "Mongoose",
-        "Redux"
-      ],
-      links: {
-        github: "https://github.com/sazzad4677/Stationary-Shop-Frontend",
-        external: "https://stationary-shop-frontend-silk.vercel.app/",
-      },
-      image: { url: "Pappier.png" },
-    },
-    {
-      title: "Cutly - Link Shortener",
-      description:
-        "A web application for shortening long URLs. Here I used a url validator. I didn't use any third-party APIs. Instead, I built my own API with my proper error handling.",
-      technologies: ["React", "Express JS", "Tailwind CSS", "Mongoose"],
-      links: {
-        github: "https://github.com/sazzad4677/cutly-frontend",
-        external: "https://cutly.netlify.app/",
-      },
-      image: { url: "cutly.webp" },
-    },
-    {
-      title: "Interactive Comments Section",
-      description:
-        "Users can read, add, edit, and delete comments in this project. Comments can be voted up or down by the user. The most popular comments will be displayed first. After the comment, the user can observe how much time has passed.",
-      technologies: ["React", "Tailwind CSS"],
-      links: {
-        github: "https://github.com/sazzad4677/Interactive-comments-section",
-        external: "https://interactive-comments-bd.netlify.app/",
-      },
-      image: { url: "comment.webp" },
-    },
-    {
-      title: "GO Mart",
-      description:
-        "A grocery delivery system controlled by voice. where the user may utilize voice commands to purchase items. A person with the authority to add, remove, and update products. Voice commands may be used to add items to the cart. Sorting and pagination of the products.",
-      technologies: [
-        "Mongoose",
-        "Express.js",
-        "React JS",
-        "Tailwind CSS",
-        "Redux",
-      ],
-      links: {
-        github: "https://github.com/sazzad4677/GoMart-Frontend",
-        external: "https://go-mart.netlify.app/",
-      },
-      image: { url: "gomart.webp" },
-    },
-  ];
+  const [features, setFeatures] = useState([]);
+
+  useEffect(() => {
+    const projectsData = contentManager.getProjects();
+    setFeatures(projectsData);
+  }, []);
+
   return (
     <Element name="projects">
       <section className="min-h-[75vh] py-12 md:py-24">
@@ -73,7 +24,7 @@ const Works = () => {
         <ul className="space-y-12 md:space-y-28 ">
           {features.map((project, index) => (
             <li
-              key={index}
+              key={project.id || index}
               className={`grid grid-cols-12 items-center gap-3 group ${(index + 1) % 2 === 0 ? "text-left" : "md:text-right"
                 }`}
             >
@@ -160,6 +111,31 @@ const Works = () => {
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         <polyline points="15 3 21 3 21 9"></polyline>
                         <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  )}
+                  {project.links.admin && (
+                    <a
+                      className="p-3 transition-colors duration-300 ease-transition hover:text-primary"
+                      href={project.links.admin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-6 w-6"
+                      >
+                        <title>Admin Panel</title>
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
                       </svg>
                     </a>
                   )}

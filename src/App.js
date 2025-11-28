@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Loader from "./component/Loader/Loader";
+import Loader from "./components/Loader/Loader";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const NoMatchRoute = React.lazy(() => import("./pages/NoMatchRoute.js"));

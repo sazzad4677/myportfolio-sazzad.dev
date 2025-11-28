@@ -1,18 +1,22 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import { Element } from "react-scroll";
+import contentManager from "@/lib/contentManager";
+
 const About = () => {
-  const skills = [
-    { name: "HTML & CSS" },
-    { name: "JavaScript (ES6+)" },
-    { name: "Bootstrap" },
-    { name: "Tailwind CSS" },
-    { name: "React & Redux" },
-    { name: "Node.js" },
-    { name: "MongoDB" },
-    { name: "Express.js" },
-    { name: "Mongoose" },
-  ];
+  const [content, setContent] = useState({
+    paragraphs: [],
+    skillsHeading: "",
+    profileImage: "/images/me.jpg"
+  });
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const aboutData = contentManager.getAbout();
+    const skillsData = contentManager.getSkills();
+    setContent(aboutData);
+    setSkills(skillsData);
+  }, []);
+
   return (
     <Element name="about">
       <section id="about" className="min-h-full max-w-[900px] py-12 md:py-24">
@@ -28,24 +32,22 @@ const About = () => {
           <div className="space-y-5">
             <div className="space-y-5 font-sans">
               <div>
-                <p className="text-xl leading-[1.3] text-secondary">
-                  I'm a passionate <span className="text-primary">Full-Stack Developer</span> focused on efficiency and continuous learning. I specialize in web applications, app development, and website creation.
-                </p>
-                <p className="mt-3 text-xl leading-[1.3] text-secondary">
-                  My goal is to create <span className="text-primary">scalable, efficient</span> programs and engaging, pixel-perfect user experiences.
-                </p>
-                <p className="mt-3 text-xl leading-[1.3] text-secondary">
-                  I'm currently seeking a <span className="text-primary">web development job </span> and am eager to contribute as a dedicated, positive team member.
-                </p>
+                {content.paragraphs.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className={`text-xl leading-[1.3] text-secondary ${index > 0 ? 'mt-3' : ''}`}
+                    dangerouslySetInnerHTML={{ __html: paragraph }}
+                  />
+                ))}
               </div>
               <p className="ml-1 mt-5 text-xl text-secondary ">
-                Here are a few technologies I've been working with recently:
+                {content.skillsHeading}
               </p>
             </div>
             <ul className="ml-1 grid list-inside grid-cols-[repeat(2,minmax(140px,200px))] gap-x-4 gap-y-2  font-mono text-sm tracking-normal text-secondary">
               {skills.map((skill, index) => (
                 <li
-                  key={index}
+                  key={skill.id || index}
                   className="list-none before:text-sm before:text-primary before:content-['▹']"
                 >
                   <span className="ml-3">{skill.name}</span>
@@ -61,7 +63,7 @@ const About = () => {
                   width="500"
                   height="500"
                   className="z-10 mix-blend-multiply grayscale filter transition-all duration-100 ease-transition group-hover:mix-blend-normal group-hover:grayscale-0"
-                  src="/images/me.jpg"
+                  src={content.profileImage}
                   alt=""
                 />
               </div>
